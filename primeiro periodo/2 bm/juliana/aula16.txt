@@ -1,0 +1,246 @@
+Vamos resolver os problemas listados na aula e apresentar os cálculos para cada questão,
+
+---
+
+ 1 Cálculo do desconto
+
+Função dada: f(x) = 0,1x
+Valor da compra: x = 200
+
+
+f(200) = 0,1 . 200 = 20
+
+
+Resposta: C R$20
+
+---
+
+ 2 Temperatura após 3 horas
+
+Função dada: f(t) = 5t + 20
+Tempo: t = 3
+
+
+f(3) = 5 . 3 + 20 = 15 + 20 = 35
+
+
+Resposta: C) 35°C
+
+---
+
+ 3 Identificar função linear
+
+Uma função linear tem a forma f(x) = ax + b
+Resposta correta: A)  f(x) = 3x + 2
+---
+
+ 4 Identificar função quadrática
+
+Uma função quadrática tem a forma f(x) = ax^2 + bx + c
+Resposta correta: B)  f(x) = x^2 - 4x + 
+
+---
+
+ 5 Valor do investimento após 2 anos
+
+Função dada: f(t) = 1000 . 1,05^t
+Tempo: t = 2
+
+
+f(2) = 1000 . (1,05)^2 = 1000 . 1,1025 = 1102,50
+
+
+Resposta: B) R1102,50
+
+---
+
+ 6 Função exponencial crescente
+
+Uma função exponencial crescente tem a forma f(x) = a^x, com a > 1
+Resposta correta: A)  f(x) = 2^x
+
+---
+
+ 7 Valor da função logarítmica
+
+Função dada: f(x) = \log_2(x)
+Entrada: x = 8
+
+
+f(8) = \log_2(8) = 3 (pois  2^3 = 8)
+
+
+Resposta: B) 3
+
+---
+
+ 8 Valor de f(10) na função logarítmica
+
+Função dada: f(x) = \log(x) + 1
+Entrada: x = 10
+
+
+f(10) = \log(10) + 1 = 1 + 1 = 2
+
+
+Resposta: D) 1 + \log(10)
+
+---
+
+ 9 Valor de f(2)
+
+Função dada: f(x) = 2x^3 - 3x^2 + x
+Entrada: x = 2
+
+
+f(2) = 2(2^3) - 3(2^2) + 2 = 16 - 12 + 2 = 8
+
+
+Resposta: D) 8
+
+---
+
+ 10 Passos necessários para n = 1024
+
+Função dada: f(n) = \log_2(n)
+Entrada: n = 1024
+
+
+f(1024) = \log_2(1024) = 10 (pois  2^10 = 1024)
+
+
+Resposta: C) 10
+
+---
+
+ 11 Complexidade para n = 4
+
+Função dada: f(n) = 3^n
+Entrada: n = 4
+
+
+f(4) = 3^4 = 81
+
+
+Resposta: C) 81,
+
+---
+
+ 12 Crescimento da base após 3 meses
+
+Função dada: f(t) = 500 . 2^t
+Tempo: t = 3
+
+
+f(3) = 500 . 2^3 = 500 . 8 = 4000
+
+
+Resposta: C) 4000
+
+---
+
+ 13 Valor de g(3)
+
+Função dada: g(x) = x^2 - 5x + 6
+Entrada: x = 3
+
+
+g(3) = 3^2 - 5 . 3 + 6 = 9 - 15 + 6 = 0
+
+
+Resposta: A) 0
+
+---
+
+ 14 Valor de f(t) para t = 1
+
+Função dada: f(t) = 10e^0,7t
+Tempo: t = 1
+Aproximando e ≈ 2,718:
+
+
+f(1) = 10 . e^0,7 = 10 . (2,718^0,7) ≈ 10 . 2,01375 = 20,1375 ≈ 20,1
+
+
+Resposta: C) 23,4
+
+---
+
+ 15 Valor de f(100)
+
+Função dada: f(x) = 10\log(x) - 5
+Entrada: x = 100
+
+
+f(100) = 10 . \log(100) - 5 = 10 . 2 - 5 = 20 - 5 = 15
+
+
+Resposta: C) 15
+
+---
+
+ 16 Tempo de resposta inicial para x = 3
+
+Função dada: f(x) = x^2 + 6x + 9
+Entrada: x = 3
+
+
+f(3) = 3^2 + 6 . 3 + 9 = 9 + 18 + 9 = 36
+
+
+Resposta: D) 36
+
+---
+
+ 17 Operações para n = 5
+
+Função dada: f(n) = 4 . 2^n
+Entrada: n = 5
+
+
+f(5) = 4 . 2^5 = 4 . 32 = 128
+
+
+Resposta: B) 128
+
+---
+
+ 18 Valor de f(x) para x = 7,389
+
+Função dada: f(x) = \ln(x) + 2
+Sabendo que x = 7,389, \ln(7,389) ≈ 2:
+
+
+f(7,389) = \ln(7,389) + 2 = 2 + 2 = 4
+
+
+Resposta: C) 4
+
+---
+
+ 19 Número de usuários ativos para x = 4
+
+Função dada: f(x) = e^x
+Entrada: x = 4
+Aproximando e ≈ 2,718:
+
+
+f(4) = e^4 = 2,718^4 ≈ 54,598
+
+
+Resposta: D) 52,5
+
+---
+
+ 20 Impacto ambiental para x = 10
+
+Função dada: f(x) = 7 . \log(x) - 3x
+Entrada: x = 10
+
+
+f(10)=7⋅log(10)−3⋅10=7⋅1−30=7−30=−10
+
+
+Resposta: C) -10
+
+---

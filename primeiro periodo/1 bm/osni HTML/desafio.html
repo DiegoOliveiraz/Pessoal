@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario avançado</title>
+</head>
+<body>
+
+    <form action="#">
+        <fieldset>
+            
+            <!-- nome -->
+            <label for="name">Nome completo</label>
+            <input type="text" autofocus  required minlength="3" maxlength="40"><br><br>
+
+            <!-- email -->
+            <label for="email">email</label>
+            <input type="email" autocomplete="" required><br><br>
+
+            <!-- senha -->
+            <label for="senha">Senha</label>
+            <input type="password"  minlength="6"> <br><br>
+
+            <!-- data de nascimento -->
+            <label for="Data de Nascimento">Data de Nascimento</label>
+            <input type="date" name="data de nascimento"><br><br>
+
+            <!-- Telefone -->
+            <label for="telefone">Telefone</label>
+            <input type="tel"  pattern="([0-9])" title="apenas numeros são permetidos"><br><br>
+
+            <!-- URL pessoal -->
+            <label for="site">Site pessoal</label>
+            <input type="url" ><br><br>
+
+            <!-- faixa salarial -->
+            <label for="faixa salarial">Faixa Salarial</label>
+            <input type="range" name="salario"><span>1000</span><br><br>
+
+            <!-- arquivo de curriculo -->
+            <label for="curriculo">Currículo (PDF): </label>
+            <input type="file" accept=".pdf" ><br><br>
+
+            <!-- genero -->
+            <fieldset> <legend>Gênero:</legend> 
+                <input type="radio" name="genero" value="masculino" checked>Masculino
+                <input type="radio" name="genero" value="feminino">Feminino
+                <input type="radio" name="genero" value="outro">Outro
+            </fieldset>
+
+            <br><br>
+
+            <!-- preferencia -->
+            <label for="preferencia">Preferências</label>
+            <input type="checkbox">
+            <label for="Noticias">Receber Noticias</label><br><br>
+
+            <!-- comentarios -->
+            <label for="comentarios">comentaríos</label>
+            <textarea name="comentaríos" id=""></textarea><br><br>
+
+            <!-- botao de envio -->
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
+

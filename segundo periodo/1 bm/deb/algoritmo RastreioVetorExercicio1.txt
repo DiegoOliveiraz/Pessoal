@@ -1,0 +1,173 @@
+algoritmo "RastreioVetorExercicio1"
+// Exercício 1: Rastreio do vetor de caracteres
+var
+   VET: vetor[1..10] de caractere
+   AUX: caractere
+   I: inteiro
+
+inicio
+   // === INICIALIZAÇÃO DO VETOR ===
+   VET[1] <- "V"
+   VET[2] <- "Z"  
+   VET[3] <- "R"
+   VET[4] <- "P"
+   VET[5] <- ""     // Posição 5 está vazia
+   VET[6] <- "A"
+   VET[7] <- "O"
+   VET[8] <- "B"
+   VET[9] <- "Y"
+   VET[10] <- "I"
+
+   escreval("╔═══════════════════════════════════════════════════════════════╗")
+   escreval("║              EXERCÍCIO 1 - RASTREIO DO VETOR                  ║")
+   escreval("╚═══════════════════════════════════════════════════════════════╝")
+   escreval()
+   
+   escreval("CONFIGURAÇÃO INICIAL:")
+   escreval("┌─────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐")
+   escreval("│ Pos │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 10 │")
+   escreval("├─────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼────┤")
+   escreva("│ Val │ ", VET[1], " │ ", VET[2], " │ ", VET[3], " │ ", VET[4], " │   │ ", VET[6], " │ ", VET[7], " │ ", VET[8], " │ ", VET[9], " │ ", VET[10], "  │")
+   escreval()
+   escreval("└─────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘")
+   escreval()
+
+   escreval("═══════════════════════════════════════════════════════════════")
+   escreval("EXECUTANDO OS COMANDOS:")
+   escreval()
+
+   // === LOOP: Para I = 1 até 4 faça ===
+   escreval("1º LOOP: Para I = 1 até 4")
+   escreval("  (Troca VET[I] com VET[9-I])")
+   escreval()
+   
+   para I de 1 ate 4 faca
+      escreval("  Iteração I =", I, ":")
+      escreval("    9 - I =", 9-I)
+      
+      AUX <- VET[I]
+      escreval("    AUX ← VET[", I, "] = '", AUX, "'")
+      
+      VET[I] <- VET[9-I]
+      escreval("    VET[", I, "] ← VET[", 9-I, "] = '", VET[9-I], "'")
+      
+      VET[9-I] <- AUX
+      escreval("    VET[", 9-I, "] ← AUX = '", AUX, "'")
+      
+      escreval("    Estado atual:")
+      escreval("    ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐")
+      escreval("    │ ", VET[1], " │ ", VET[2], " │ ", VET[3], " │ ", VET[4], " │   │ ", VET[6], " │ ", VET[7], " │ ", VET[8], " │ ", VET[9], " │ ", VET[10], "  │")
+      escreval("    └───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘")
+      escreval()
+   fimpara
+   
+   escreval("═══════════════════════════════════════════════════════════════")
+   escreval("COMANDOS INDIVIDUAIS:")
+   escreval()
+   
+   escreval("  VET[7] ← VET[2]")
+   VET[7] <- VET[2]
+   escreval("    VET[7] agora vale '", VET[7], "'")
+   escreval()
+   
+   escreval("  VET[9] ← VET[3]") 
+   VET[9] <- VET[3]
+   escreval("    VET[9] agora vale '", VET[9], "'")
+   escreval()
+   
+   escreval("═══════════════════════════════════════════════════════════════")
+   escreval("CONFIGURAÇÃO FINAL:")
+   escreval("┌─────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐")
+   escreval("│ Pos │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 10 │")
+   escreval("├─────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼────┤")
+   escreva("│ Val │ ", VET[1], " │ ", VET[2], " │ ", VET[3], " │ ", VET[4], " │   │ ", VET[6], " │ ", VET[7], " │ ", VET[8], " │ ", VET[9], " │ ", VET[10], "  │")
+   escreval()
+   escreval("└─────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘")
+   
+   escreval()
+   escreval("═══════════════════════════════════════════════════════════════")
+   escreval("RESUMO DAS TRANSFORMAÇÕES:")
+   escreval("• 1º loop: Inverte as posições 1-4 com 8-5 (troca extremos)")
+   escreval("• VET[7] ← VET[2]: Copia Z para a posição 7")
+   escreval("• VET[9] ← VET[3]: Copia R para a posição 9")
+   escreval("• Posição 5 permanece vazia durante todo o processo")
+
+fimalgoritmo
+----------------------------------------------------------------------------
+algoritmo "RastreioVetorCaracteres"
+// Exercício 2: Rastreio do vetor de caracteres
+var
+   VET: vetor[1..12] de caractere
+   AUX: caractere
+   I: inteiro
+
+inicio
+   // === INICIALIZAÇÃO DO VETOR ===
+   VET[1] <- "I"
+   VET[2] <- "Y"  
+   VET[3] <- "A"
+   VET[4] <- "I"
+   VET[5] <- "R"
+   VET[6] <- "E"
+   VET[7] <- "F"
+   VET[8] <- ""     // Posição 8 está vazia
+   VET[9] <- "S"
+   VET[10] <- "X"
+   VET[11] <- "O"
+   VET[12] <- "B"
+
+   escreval("╔══════════════════════════════════════════════════════╗")
+   escreval("║              RASTREIO DO VETOR                       ║")
+   escreval("╚══════════════════════════════════════════════════════╝")
+   escreval()
+   
+   escreval("CONFIGURAÇÃO INICIAL:")
+   escreval("┌────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┬────┬────┐")
+   escreval("│Pos │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 10 │ 11 │ 12 │")
+   escreval("├────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼────┼────┼────┤")
+   escreva("│Val │ ", VET[1], " │ ", VET[2], " │ ", VET[3], " │ ", VET[4], " │ ", VET[5], " │ ", VET[6], " │ ", VET[7], " │   │ ", VET[9], " │ ", VET[10], "  │ ", VET[11], "  │ ", VET[12], "  │")
+   escreval()
+   escreval("└────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┴────┴────┘")
+   escreval()
+
+   // === EXECUTANDO OS COMANDOS ===
+   
+   // 1º Loop: Para I = 12 até 10 de -1 em -1 faça
+   escreval("1º LOOP: Para I = 12 até 10 de -1 em -1")
+   para I de 12 ate 10 passo -1 faca
+      AUX <- VET[I]
+      VET[I] <- VET[13-I]
+      VET[13-I] <- AUX
+   fimpara
+   
+   // 2º Loop: Para I = 4 até 6 faça  
+   escreval("2º LOOP: Para I = 4 até 6")
+   para I de 4 ate 6 faca
+      AUX <- VET[I]
+      VET[I] <- VET[13-I]
+      VET[13-I] <- AUX
+   fimpara
+   
+   // Comandos individuais
+   escreval("COMANDOS INDIVIDUAIS:")
+   VET[3] <- VET[10]
+   VET[11] <- VET[4]
+   
+   escreval()
+   escreval("CONFIGURAÇÃO FINAL:")
+   escreval("┌────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┬────┬────┐")
+   escreval("│Pos │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 10 │ 11 │ 12 │")
+   escreval("├────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼────┼────┼────┤")
+   escreva("│Val │ ", VET[1], " │ ", VET[2], " │ ", VET[3], " │ ", VET[4], " │ ", VET[5], " │ ", VET[6], " │ ", VET[7], " │   │ ", VET[9], " │ ", VET[10], "  │ ", VET[11], "  │ ", VET[12], "  │")
+   escreval()
+   escreval("└────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┴────┴────┘")
+   
+   escreval()
+   escreval("═════════════════════════════════════════════════════════")
+   escreval("EXPLICAÇÃO DOS COMANDOS EXECUTADOS:")
+   escreval("1º loop: Troca posições simétricas das extremidades (12↔1, 11↔2, 10↔3)")
+   escreval("2º loop: Troca posições simétricas do meio (4↔9, 5↔8, 6↔7)")
+   escreval("VET[3] ← VET[10]: Copia valor da posição 10 para a posição 3")
+   escreval("VET[11] ← VET[4]: Copia valor da posição 4 para a posição 11")
+
+fimalgoritmo

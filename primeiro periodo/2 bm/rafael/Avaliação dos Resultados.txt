@@ -1,0 +1,65 @@
+ Avaliação dos Resultados
+
+ EXPERIMENTO 1: Porta AND
+
+Tabela-verdade preenchida:
+
+| A (Entrada) | B (Entrada) | S (Saída/LED) |
+|-------------|-------------|---------------|
+| 0           | 0           | 0             |
+| 0           | 1           | 0             |
+| 1           | 0           | 0             |
+| 1           | 1           | 1             |
+
+Análise dos resultados:
+Os resultados obtidos confirmam perfeitamente a tabela-verdade teórica da porta AND. Observamos que:
+- A saída só assume valor 1 (LED aceso) quando AMBAS entradas estão em 1
+- Em todas as outras combinações de entrada, a saída permanece em 0 (LED apagado)
+- Isso demonstra o caráter restritivo da porta AND, que exige que todas as condições sejam satisfeitas simultaneamente para produzir uma saída positiva
+
+ EXPERIMENTO 2: Porta OR
+
+Tabela-verdade preenchida:
+
+| A (Entrada) | B (Entrada) | S (Saída/LED) |
+|-------------|-------------|---------------|
+| 0           | 0           | 0             |
+| 0           | 1           | 1             |
+| 1           | 0           | 1             |
+| 1           | 1           | 1             |
+
+Análise dos resultados:
+Os resultados experimentais concordam plenamente com o comportamento teórico da porta OR:
+- A saída vai para 1 (LED acende) quando PELO MENOS UMA das entradas está em 1
+- A única situação onde a saída permanece em 0 é quando ambas entradas estão em 0
+- Isso ilustra o caráter inclusivo da porta OR, que responde positivamente a qualquer condição verdadeira
+
+ EXPERIMENTO 3: Porta NOT
+
+Tabela-verdade preenchida:
+
+| A (Entrada) | S (Saída/LED) |
+|-------------|---------------|
+| 0           | 1             |
+| 1           | 0             |
+
+Análise dos resultados:
+Os resultados demonstram claramente o funcionamento da porta NOT:
+- A saída sempre assume o valor inverso da entrada
+- Quando a entrada é 0, a saída vai para 1 (LED acende)
+- Quando a entrada é 1, a saída vai para 0 (LED apaga)
+- É impossível ter uma porta NOT com múltiplas entradas porque sua função essencial é inverter UM ÚNICO sinal lógico. Portas com múltiplas entradas realizam operações de combinação (AND, OR) ou negação combinada (NAND, NOR) de sinais.
+
+Conclusão Geral:
+Através desta atividade prática, foi possível:
+1. Verificar experimentalmente o comportamento das três portas lógicas básicas
+2. Constatar a correspondência exata entre os resultados práticos e as tabelas-verdade teóricas
+3. Compreender as aplicações específicas de cada tipo de porta em circuitos digitais
+4. Desenvolver habilidades na montagem e análise de circuitos lógicos simples
+
+Estes conhecimentos são fundamentais para o projeto e análise de sistemas digitais mais complexos, formando a base para estudos avançados em eletrônica digital e arquitetura de computadores.
+
+fontes : Floyd, T. L. (2009). Sistemas Digitais: Fundamentos e Aplicações, Stallings, W. (2010). Arquitetura e Organização de Computadores (8ª ed.). Pearson.
+
+, Petruzella, F. D. (2014). Controladores Lógicos Programáveis (4ª ed.). AMGH.
+

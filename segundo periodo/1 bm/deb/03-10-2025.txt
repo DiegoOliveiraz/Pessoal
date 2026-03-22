@@ -1,0 +1,121 @@
+ 1) Conceito de Arquivos em Programação
+
+Arquivos são conjuntos de dados armazenados de forma permanente ou temporária em dispositivos de armazenamento, como discos rígidos ou SSDs. Eles permitem a persistência de dados, ou seja, garantem que as informações não sejam perdidas quando o programa encerra sua execução. Os arquivos funcionam como uma ponte entre a memória volátil (RAM) e o armazenamento permanente, possibilitando que dados sejam salvos, recuperados e compartilhados entre diferentes execuções de programas.
+
+---
+
+ 2) Comparação: Arquivos de Texto vs. Arquivos Binários
+
+ Três principais diferenças:
+
+| Aspecto | Arquivos de Texto | Arquivos Binários |
+|---------|-------------------|-------------------|
+| Formato de Armazenamento | Dados armazenados como sequência de caracteres legíveis por humanos, codificados segundo um padrão (UTF-8, ASCII, etc.). Cada linha é uma string de caracteres. | Dados armazenados como sequência de bytes (0s e 1s) em formato bruto, não legível diretamente por humanos. Representação direta da estrutura de dados na memória. |
+| Conversão e Tamanho | Valores numéricos são convertidos para texto (ex: número 1234 vira string "1234"), gerando arquivos maiores e exigindo parsing posterior para reconverter. | Dados mantêm seu formato original compacto. Um número inteiro ocupa apenas os bytes necessários (ex: 4 bytes para int32), sem conversão. |
+| Casos de Uso Típicos | Configurações, logs, documentos, dados que precisam ser editados manualmente, arquivos CSV, JSON, XML. Ideal quando legibilidade humana é importante. | Imagens, vídeos, áudio, executáveis, dados de sensores, estruturas complexas, bancos de dados. Ideal quando performance, compactação e precisão são prioritárias. |
+
+---
+
+ 3) Fluxo Completo de Manipulação de Arquivos
+
+ Etapas:
+
+a) Abertura do Arquivo
+- Utiliza-se uma função específica (ex: `open()`) que especifica o nome do arquivo e o modo de acesso (leitura, escrita, etc.)
+- O sistema operacional aloca recursos e cria um identificador (file handler) para o arquivo
+- Risco de não realizar: Impossibilidade de acessar o arquivo; tentativas de operação sem abertura causam erros fatais
+
+b) Operação (Leitura ou Escrita)
+- Leitura: Extrai dados do arquivo usando funções como `read()`, `readline()` ou `readlines()`
+- Escrita: Insere ou modifica dados usando funções como `write()`
+- Risco de não realizar adequadamente: Perda de dados, corrupção do arquivo, leitura incompleta ou incorreta; operações inválidas para o modo de abertura escolhido
+
+c) Fechamento do Arquivo
+- Utiliza-se um comando específico (ex: `close()`) para finalizar o acesso
+- Garante que buffers sejam descarregados (dados pendentes sejam gravados)
+- Libera recursos do sistema operacional
+- Riscos de não fechar:
+  - Perda de dados não gravados (buffer não descarregado)
+  - Vazamento de recursos (file descriptors esgotados)
+  - Bloqueio do arquivo para outros processos
+  - Inconsistência nos dados armazenados
+
+---
+
+ 4) Modos de Abertura de Arquivos
+
+| Modo | Nome | Funcionamento |
+|------|------|---------------|
+| r | Leitura (read) | Abre o arquivo apenas para leitura. O arquivo deve existir previamente. Não permite modificações. Ponteiro posicionado no início. |
+| w | Escrita (write) | Abre o arquivo para escrita. Apaga todo o conteúdo anterior se o arquivo existir. Cria o arquivo se não existir. Ponteiro no início. |
+| a | Apêndice (append) | Abre o arquivo para adicionar dados ao final. Preserva o conteúdo anterior. Cria o arquivo se não existir. Ponteiro posicionado no final. |
+| r+ | Leitura e Escrita | Abre para leitura e escrita. O arquivo deve existir. Não apaga conteúdo anterior. Ponteiro no início. Permite sobrescrever dados existentes. |
+| w+ | Escrita e Leitura | Abre para escrita e leitura. Apaga conteúdo anterior se o arquivo existir. Cria o arquivo se não existir. Permite ler após escrever. |
+| a+ | Apêndice e Leitura | Abre para adicionar ao final e ler. Preserva conteúdo anterior. Cria o arquivo se não existir. Escrita sempre no final, mas permite leitura. |
+
+---
+
+ 5) Funções de Leitura de Texto
+
+a) `read()`
+- Função: Lê o conteúdo completo do arquivo de uma só vez
+- Retorno: Uma única string contendo todo o texto do arquivo
+- Uso ideal: Arquivos pequenos onde você precisa processar todo o conteúdo de uma vez
+- Atenção: Pode consumir muita memória com arquivos grandes
+
+b) `readline()`
+- Função: Lê uma única linha por vez do arquivo
+- Retorno: String contendo a linha atual (incluindo o caractere de quebra `\n`)
+- Uso ideal: Processamento sequencial linha por linha, especialmente em arquivos grandes
+- Vantagem: Controle fino sobre cada linha e economia de memória
+
+c) `readlines()`
+- Função: Lê todas as linhas do arquivo
+- Retorno: Uma lista onde cada elemento é uma linha do arquivo (strings)
+- Uso ideal: Quando você precisa de acesso aleatório às linhas ou processar múltiplas vezes
+- Características: Mais flexível que `read()` para manipular linhas individualmente, mas carrega tudo na memória
+
+---
+
+ 6) Diferença do Método `write()` em Texto vs. Binário
+
+ Principal Diferença:
+
+Em Arquivos de Texto:
+- Recebe objetos do tipo string (`str`)
+- A biblioteca realiza conversão automática de cada caractere para bytes segundo a codificação do arquivo (UTF-8 por padrão)
+- Grava sequência de bytes correspondentes ao texto, tratando quebras de linha (`\n`)
+- Consequência: Conteúdo legível em editores, mas valores numéricos são convertidos para texto, gerando arquivos maiores e exigindo parsing posterior para reconverter
+
+Em Arquivos Binários:
+- Recebe objetos do tipo bytes ou bytearray
+- Nenhuma conversão automática ocorre
+- Copia os bytes exatamente como recebidos, byte-a-byte
+- Consequência: Permite persistir números, estruturas e dados complexos de forma compacta e exata, mas o resultado não é legível por humanos
+
+Resumo: Em modo texto, `write()` passa por filtros de codificação e conversão de caracteres; em modo binário, conserva fielmente o formato e tamanho original dos dados.
+
+---
+
+ 7) Três Tipos de Exceções na Manipulação de Arquivos
+
+ 1) FileNotFoundError (Arquivo não encontrado)
+- Causa: Tentativa de abrir um arquivo em modo leitura (`r` ou `r+`) quando o arquivo não existe no caminho especificado
+- Impacto: Interrupção abrupta do programa se não tratada
+- Prevenção: Verificar existência prévia ou usar tratamento de exceção (`try-except`)
+
+ 2) PermissionError (Permissões insuficientes)
+- Causa: Usuário ou processo não possui permissões adequadas para acessar o arquivo (leitura, escrita ou execução negadas pelo sistema operacional)
+- Cenários comuns: Arquivos protegidos, arquivos abertos por outro processo, restrições de sistema
+- Impacto: Impossibilidade de realizar a operação desejada
+- Prevenção: Verificar permissões de arquivo, executar com privilégios adequados, garantir que o arquivo não está em uso
+
+ 3) IOError / OSError (Erros de Entrada/Saída)
+- Causa: Problemas durante operações de leitura ou escrita, como:
+  - Disco cheio (sem espaço para gravar)
+  - Falha no dispositivo de armazenamento
+  - Arquivo corrompido
+  - Interrupção de conexão (em sistemas de rede)
+  - Tentativa de escrever em arquivo aberto apenas para leitura
+- Impacto: Perda ou corrupção de dados, falha na persistência
+- Prevenção: Tratamento robusto de exceções, validação de operações, verificação de espaço em disco

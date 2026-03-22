@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Hyperlink</title>
+</head>
+<body>
+    <h1>Hyperlink</h1>
+    <h2>Usando Hyperlink Externos</h2>
+    <p>Você pode acessar a página guia <a href="https://youtu.be/Fhy-5CtVkiM?si=_pEi1mQx_19uasHr">completa do HTML</a>.</p>
+    <p>Você também pode acessar o canal do <a href="https://www.youtube.com/" target="_blank" rel="external">YouTube</a>.</p>
+    
+    <h2>Utilizando Links Internos</h2>
+    <p>Ir para <a href="index.html" target="_top" rel="next">início</a>.</p>
+
+    <h2>Links para Download</h2>
+    <ul>
+        <li>Fazer <a href="aula 5/livro/livro/html5-web-1.pdf" target="_blank" type="application/pdf">download</a> do livro em PDF</li>
+        <li>Fazer <a href="aula 5/livro/livro/html5-web-1.rar" target="_blank" type="application/zip">download</a> do livro em ZIP</li>
+    </ul>
+    
+    <h2>Introduzindo Áudio</h2>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="aula 5/midia/midia/kazoom.mp3" type="audio/mpeg">
+        <source src="aula 5/midia/midia/kazoom.mp3" type="audio/mpeg">
+        <source src="aula 5/midia/midia/kazoom.mp3" type="audio/mpeg">
+    </audio>
+    
+    <h2>Aprendendo a Inserir Vídeo do YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yrgMYB2_xTM?si=xJRoJxaXDvJrRUSe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Vídeo Local</h2>
+    <video width="720" height="400" preload="metadata" autoplay controls loop muted>
+        <source src="aula 5/midia/midia/Pexels Videos 1238406.mp4" type="video/mp4">
+    </video>
+
+    <h2>Trabalhando com imagens dinamicas</h2>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="aula 5/imagens/imagens/foto-g.png" alt="Imagem G">
+    </picture>
+    
+    </body>
+    </html>

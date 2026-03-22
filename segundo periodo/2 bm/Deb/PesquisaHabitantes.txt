@@ -1,0 +1,28 @@
+algoritmo "PesquisaHabitantes"
+
+tipo
+   regEndereco = registro
+      rua: caractere
+      numero: inteiro
+      bairro: caractere
+      cidade: caractere
+      estado: caractere
+   fimregistro
+
+   regHabitante = registro
+      nome: caractere
+      sexo: caractere
+      corOlhos: caractere
+      diaNasc: inteiro
+      mesNasc: inteiro
+      anoNasc: inteiro
+      endResidencial: regEndereco
+      endTrabalho: regEndereco
+   fimregistro
+
+var
+   habitantes: vetor[1..1500] de regHabitante
+
+inicio
+
+fimalgoritmo

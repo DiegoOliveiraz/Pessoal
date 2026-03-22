@@ -1,0 +1,88 @@
+Portas Lógicas Digitais Secundárias
+
+ 1. Introdução
+Este relatório apresenta os resultados dos experimentos virtuais com portas lógicas secundárias (NAND, NOR, XOR e XNOR), realizados no simulador de circuitos digitais. O objetivo foi comprovar suas tabelas-verdade e analisar aplicações práticas.
+
+---
+
+ 2. Resultados dos Experimentos
+
+ Experimento 1: Porta NAND
+Tabela-verdade:
+| A | B | Saída (LED) |
+|---|---|------------|
+| 0 | 0 | 1          |
+| 0 | 1 | 1          |
+| 1 | 0 | 1          |
+| 1 | 1 | 0          |
+
+Análise:  
+- A saída só é 0 quando todas as entradas são 1, confirmando que a NAND é uma AND invertida.  
+- Aplicação: Circuitos de alarme (ex.: ativar quando qualquer sensor falhar).  
+
+---
+
+ Experimento 2: Porta NOR
+Tabela-verdade:
+| A | B | Saída (LED) |
+|---|---|------------|
+| 0 | 0 | 1          |
+| 0 | 1 | 0          |
+| 1 | 0 | 0          |
+| 1 | 1 | 0          |
+
+Análise:  
+- Saída 1 apenas se todas as entradas forem 0, demonstrando que a NOR é uma OR invertida.  
+- Pode ser construída com uma OR + NOT.  
+- Uso típico: Ativar sistemas quando todas as condições forem falsas (ex.: irrigação noturna sem chuva).  
+
+---
+
+ Experimento 3: Porta XOR
+Tabela-verdade:
+| A | B | Saída (LED) |
+|---|---|------------|
+| 0 | 0 | 0          |
+| 0 | 1 | 1          |
+| 1 | 0 | 1          |
+| 1 | 1 | 0          |
+
+Análise:  
+- Saída 1 quando as entradas são diferentes.  
+- Aplicação: Sistemas de segurança (ex.: cofre que abre apenas se duas chaves estiverem em estados opostos).  
+
+---
+
+ Experimento 4: Porta XNOR
+Tabela-verdade:
+| A | B | Saída (LED) |
+|---|---|------------|
+| 0 | 0 | 1          |
+| 0 | 1 | 0          |
+| 1 | 0 | 0          |
+| 1 | 1 | 1          |
+
+Análise:  
+- Saída 1 quando as entradas são iguais (inverso da XOR).  
+- Pode ser implementada com XOR + NOT.  
+- Chamada de "bloco coincidência" por detectar igualdade (ex.: comparadores digitais).  
+
+---
+
+ 3. Conclusão  
+Os experimentos comprovaram que as portas secundárias são essenciais para:  
+- Controle lógico complexo (ex.: NAND em CLPs).  
+- Detecção de padrões (XOR/XNOR em comparadores).  
+- Segurança (NOR em sistemas de emergência).  
+
+Sugestões:  
+- Explorar aplicações em microcontroladores (ex.: Arduino).  
+- Simular circuitos combinacionais (ex.: somador binário com XOR e AND).  
+
+Referências: Floyd (2009), Petruzella (2014), e Stallings (2010).  
+
+--- 
+
+Fontes:FLOYD, T. L. (2009).
+, PETRUZELLA, F. D. (2014).
+, STALLINGS, W. (2010).

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com Validação - Atividade 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Formulário de Cadastro</h1>
+      <form id="formulario" novalidate>
+        <!-- Campo Nome: validação mínimo 3 caracteres -->
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required />
+          <span class="erro" id="erro-nome"></span>
+          <small class="dica">Mínimo 3 caracteres</small>
+        </div>
+
+        <!-- Campo Email: validação contendo @ -->
+        <div class="campo">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <span class="erro" id="erro-email"></span>
+          <small class="dica">Deve conter @</small>
+        </div>
+
+        <!-- Campo Telefone: com máscara automática -->
+        <div class="campo">
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(11) 99999-9999"
+            required
+          />
+          <span class="erro" id="erro-telefone"></span>
+          <small class="dica">Formato: (11) 99999-9999</small>
+        </div>
+
+        <!-- Campo CPF: com máscara automática -->
+        <div class="campo">
+          <label for="cpf">CPF:</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            placeholder="000.000.000-00"
+            required
+          />
+          <span class="erro" id="erro-cpf"></span>
+          <small class="dica">Formato: 000.000.000-00</small>
+        </div>
+
+        <!-- Campo Data de Nascimento: validação maior de 18 anos -->
+        <div class="campo">
+          <label for="dataNascimento">Data de Nascimento:</label>
+          <input
+            type="date"
+            id="dataNascimento"
+            name="dataNascimento"
+            required
+          />
+          <span class="erro" id="erro-data"></span>
+          <small class="dica">Deve ser maior de 18 anos</small>
+        </div>
+
+        <!-- Botão de submit -->
+        <button type="submit">Cadastrar</button>
+
+        <!-- Área para mostrar dados válidos -->
+        <div id="resultado" class="resultado"></div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

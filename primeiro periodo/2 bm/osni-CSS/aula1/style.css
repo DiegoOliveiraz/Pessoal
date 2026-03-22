@@ -1,0 +1,31 @@
+@charset "UFT-8";
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+background-color: bisque;
+
+}
+.titu{
+    color: chocolate;
+    font-family: cursive;
+    text-align: center;
+    background-color: rgb(59, 35, 5);
+}
+.sub{
+    font-family: serif;
+    font-size: 40px;
+    color: brown;
+    text-align: left;
+    text-decoration: underline;
+}
+.para{
+    font-family: fantasy;
+    font-size: 25px;
+    text-align: justify;
+}
+.float{
+    float: left;
+}

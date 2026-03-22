@@ -1,0 +1,159 @@
+algoritmo "ExerciciosVetores"
+// Exercício 1: Rastreio do vetor + Exercício 2: Verificar elementos iguais a 20
+var
+   // Variáveis do Exercício 1
+   VET: vetor[1..10] de caractere
+   AUX: caractere
+   I: inteiro
+
+   // Variáveis do Exercício 2
+   NUMEROS: vetor[1..10] de inteiro
+   J: inteiro
+   encontrou: logico
+
+inicio
+   escreval("+---------------------------------------------------------------+")
+   escreval("¦                        EXERCÍCIO 1                            ¦")
+   escreval("¦                   RASTREIO DO VETOR                           ¦")
+   escreval("+---------------------------------------------------------------+")
+   escreval()
+
+   // === INICIALIZAÇÃO DO VETOR EXERCÍCIO 1 ===
+   VET[1] <- "T"
+   VET[2] <- "R"
+   VET[3] <- "X"
+   VET[4] <- "S"
+   VET[5] <- ""     // Posição 5 está vazia
+   VET[6] <- "E"
+   VET[7] <- "O"
+   VET[8] <- "B"
+   VET[9] <- "A"
+   VET[10] <- "I"
+
+   escreval("CONFIGURAÇÃO INICIAL:")
+   escreval("+----------------------------------------------+")
+   escreval("¦ Pos ¦ 1 ¦ 2 ¦ 3 ¦ 4 ¦ 5 ¦ 6 ¦ 7 ¦ 8 ¦ 9 ¦ 10 ¦")
+   escreval("+-----+---+---+---+---+---+---+---+---+---+----¦")
+   escreva("¦ Val ¦ ", VET[1], " ¦ ", VET[2], " ¦ ", VET[3], " ¦ ", VET[4], " ¦   ¦ ", VET[6], " ¦ ", VET[7], " ¦ ", VET[8], " ¦ ", VET[9], " ¦ ", VET[10], "  ¦")
+   escreval()
+   escreval("+----------------------------------------------+")
+   escreval()
+
+   escreval("---------------------------------------------------------------")
+   escreval("EXECUTANDO OS COMANDOS:")
+   escreval()
+
+   // Primeiros comandos individuais
+   escreval("1º COMANDOS INDIVIDUAIS:")
+   escreval("  AUX ? VET[6] = '", VET[6], "'")
+   AUX <- VET[6]
+
+   escreval("  VET[6] ? VET[9] = '", VET[9], "'")
+   VET[6] <- VET[9]
+
+   escreval("  VET[9] ? AUX = '", AUX, "'")
+   VET[9] <- AUX
+   escreval("  (Troca entre posições 6 e 9: E ? A)")
+   escreval()
+
+   escreval("    Estado após troca:")
+   escreval("    +----------------------------------------+")
+   escreval("    ¦ ", VET[1], " ¦ ", VET[2], " ¦ ", VET[3], " ¦ ", VET[4], " ¦   ¦ ", VET[6], " ¦ ", VET[7], " ¦ ", VET[8], " ¦ ", VET[9], " ¦ ", VET[10], "  ¦")
+   escreval("    +----------------------------------------+")
+   escreval()
+
+   // Loop
+   escreval("2º LOOP: Para I = 1 até 4")
+   escreval("  (Troca VET[I] com VET[9-I])")
+   escreval()
+
+   para I de 1 ate 4 faca
+      escreval("  Iteração I =", I, ":")
+      escreval("    9 - I =", 9-I)
+
+      AUX <- VET[I]
+      escreval("    AUX ? VET[", I, "] = '", AUX, "'")
+
+      VET[I] <- VET[9-I]
+      escreval("    VET[", I, "] ? VET[", 9-I, "] = '", VET[9-I], "'")
+
+      VET[9-I] <- AUX
+      escreval("    VET[", 9-I, "] ? AUX = '", AUX, "'")
+
+      escreval("    Estado atual:")
+      escreval("    +----------------------------------------+")
+      escreval("    ¦ ", VET[1], " ¦ ", VET[2], " ¦ ", VET[3], " ¦ ", VET[4], " ¦   ¦ ", VET[6], " ¦ ", VET[7], " ¦ ", VET[8], " ¦ ", VET[9], " ¦ ", VET[10], "  ¦")
+      escreval("    +----------------------------------------+")
+      escreval()
+   fimpara
+
+   // Comando final
+   escreval("3º COMANDO FINAL:")
+   escreval("  VET[6] ? VET[2] = '", VET[2], "'")
+   VET[6] <- VET[2]
+   escreval()
+
+   escreval("---------------------------------------------------------------")
+   escreval("CONFIGURAÇÃO FINAL DO EXERCÍCIO 1:")
+   escreval("+----------------------------------------------+")
+   escreval("¦ Pos ¦ 1 ¦ 2 ¦ 3 ¦ 4 ¦ 5 ¦ 6 ¦ 7 ¦ 8 ¦ 9 ¦ 10 ¦")
+   escreval("+-----+---+---+---+---+---+---+---+---+---+----¦")
+   escreva("¦ Val ¦ ", VET[1], " ¦ ", VET[2], " ¦ ", VET[3], " ¦ ", VET[4], " ¦   ¦ ", VET[6], " ¦ ", VET[7], " ¦ ", VET[8], " ¦ ", VET[9], " ¦ ", VET[10], "  ¦")
+   escreval()
+   escreval("+----------------------------------------------+")
+
+   escreval()
+   escreval()
+   escreval("+---------------------------------------------------------------+")
+   escreval("¦                        EXERCÍCIO 2                            ¦")
+   escreval("¦          VERIFICAR ELEMENTOS IGUAIS A 20                      ¦")
+   escreval("+---------------------------------------------------------------+")
+   escreval()
+
+   // === EXERCÍCIO 2 ===
+   escreval("Digite 10 números inteiros:")
+   para I de 1 ate 10 faca
+      escreva("Número ", I, ": ")
+      leia(NUMEROS[I])
+   fimpara
+
+   escreval()
+   escreval("Vetor digitado:")
+   escreval("+--------------------------------------------------------+")
+   escreval("¦ Pos ¦ 1  ¦ 2  ¦ 3  ¦ 4  ¦ 5  ¦ 6  ¦ 7  ¦ 8  ¦ 9  ¦ 10  ¦")
+   escreval("+-----+----+----+----+----+----+----+----+----+----+-----¦")
+   escreva("¦ Val ¦")
+   para I de 1 ate 10 faca
+      se NUMEROS[I] >= 10 entao
+         escreva(NUMEROS[I], " ¦")
+      senao
+         escreva(" ", NUMEROS[I], " ¦")
+      fimse
+   fimpara
+   escreval()
+   escreval("+--------------------------------------------------------+")
+   escreval()
+
+   // Verificar se existem elementos iguais a 20
+   encontrou <- falso
+   escreval("Verificando elementos iguais a 20...")
+
+   para I de 1 ate 10 faca
+      se NUMEROS[I] = 20 entao
+         se encontrou = falso entao
+            escreval("Elementos iguais a 20 encontrados nas posições:")
+            encontrou <- verdadeiro
+         fimse
+         escreval("  Posição", I, ": valor =", NUMEROS[I])
+      fimse
+   fimpara
+
+   se encontrou = falso entao
+      escreval("Não foram encontrados elementos iguais a 20 no vetor.")
+   fimse
+
+   escreval()
+   escreval("---------------------------------------------------------------")
+   escreval("FIM DOS EXERCÍCIOS")
+
+fimalgoritmo

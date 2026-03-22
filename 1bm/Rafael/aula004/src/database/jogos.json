@@ -1,0 +1,316 @@
+[
+  {
+    "titulo": "Aventura nas Estrelas",
+    "genero": "Ação/Aventura",
+    "desenvolvedor": "Galáxia Games",
+    "data_lancamento": "2022-11-15",
+    "classificacao_indicativa": "12",
+    "plataforma": "Xbox Series X",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$187.34",
+    "idiomas_disponiveis": [
+      "Português",
+      "Espanhol",
+      "Francês"
+    ],
+    "id": 1
+  },
+  {
+    "titulo": "Corrida Radical",
+    "genero": "Corrida",
+    "desenvolvedor": "Velocidade Studios",
+    "data_lancamento": "2021-06-10",
+    "classificacao_indicativa": "10",
+    "plataforma": "PC",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$263.91",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Espanhol",
+      "Francês",
+      "Alemão"
+    ],
+    "id": 2
+  },
+  {
+    "titulo": "Mistério na Mansão",
+    "genero": "Puzzle/Investigação",
+    "desenvolvedor": "Enigma Soft",
+    "data_lancamento": "2023-03-22",
+    "classificacao_indicativa": "14",
+    "plataforma": "Nintendo Switch",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$108.45",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Japonês"
+    ],
+    "id": 3
+  },
+  {
+    "titulo": "Reino Encantado",
+    "genero": "RPG",
+    "desenvolvedor": "Fantasia Digital",
+    "data_lancamento": "2020-09-05",
+    "classificacao_indicativa": "12",
+    "plataforma": "PlayStation 5",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$92.67",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Espanhol"
+    ],
+    "id": 4
+  },
+  {
+    "titulo": "Batalha dos Robôs",
+    "genero": "Estratégia",
+    "desenvolvedor": "TechWar Games",
+    "data_lancamento": "2022-01-30",
+    "classificacao_indicativa": "16",
+    "plataforma": "Mobile",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$276.88",
+    "idiomas_disponiveis": [
+      "Português",
+      "Chinês",
+      "Japonês"
+    ],
+    "id": 5
+  },
+  {
+    "titulo": "Corrida Cósmica",
+    "genero": "Corrida",
+    "desenvolvedor": "Estúdio Estelar",
+    "data_lancamento": "2022-03-15",
+    "classificacao_indicativa": "L",
+    "plataforma": "PC",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$145.23",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês"
+    ],
+    "id": 6
+  },
+  {
+    "titulo": "Mistério na Mansão",
+    "genero": "Aventura",
+    "desenvolvedor": "Jogos Intriga",
+    "data_lancamento": "2021-10-31",
+    "classificacao_indicativa": "12",
+    "plataforma": "Xbox Series X",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$199.99",
+    "idiomas_disponiveis": [
+      "Português",
+      "Francês"
+    ],
+    "id": 7
+  },
+  {
+    "titulo": "Batalha dos Robôs",
+    "genero": "Ação",
+    "desenvolvedor": "TechWar Games",
+    "data_lancamento": "2023-01-20",
+    "classificacao_indicativa": "10",
+    "plataforma": "Nintendo Switch",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$88.00",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Alemão"
+    ],
+    "id": 8
+  },
+  {
+    "titulo": "Reino Encantado",
+    "genero": "RPG",
+    "desenvolvedor": "Magia Studios",
+    "data_lancamento": "2020-07-07",
+    "classificacao_indicativa": "10",
+    "plataforma": "PlayStation 5",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$134.56",
+    "idiomas_disponiveis": [
+      "Português",
+      "Espanhol"
+    ],
+    "id": 9
+  },
+  {
+    "titulo": "Zumbis do Amanhã",
+    "genero": "Terror",
+    "desenvolvedor": "Apocalipse Games",
+    "data_lancamento": "2022-11-11",
+    "classificacao_indicativa": "16",
+    "plataforma": "PC",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$212.45",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Italiano"
+    ],
+    "id": 10
+  },
+  {
+    "titulo": "Construção Criativa",
+    "genero": "Simulação",
+    "desenvolvedor": "Bloco & Cia",
+    "data_lancamento": "2019-05-05",
+    "classificacao_indicativa": "L",
+    "plataforma": "Mobile",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$59.99",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês"
+    ],
+    "id": 11
+  },
+  {
+    "titulo": "Futebol de Rua",
+    "genero": "Esporte",
+    "desenvolvedor": "Ginga Games",
+    "data_lancamento": "2021-06-12",
+    "classificacao_indicativa": "L",
+    "plataforma": "Nintendo Switch",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$89.90",
+    "idiomas_disponiveis": [
+      "Português",
+      "Espanhol"
+    ],
+    "id": 12
+  },
+  {
+    "titulo": "Caçadores do Espaço",
+    "genero": "Ficção Científica",
+    "desenvolvedor": "Galáxia Studio",
+    "data_lancamento": "2023-04-04",
+    "classificacao_indicativa": "12",
+    "plataforma": "Xbox Series X",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$239.00",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Chinês"
+    ],
+    "id": 13
+  },
+  {
+    "titulo": "Puzzle Mágico",
+    "genero": "Puzzle",
+    "desenvolvedor": "Enigma Corp",
+    "data_lancamento": "2020-09-09",
+    "classificacao_indicativa": "L",
+    "plataforma": "PC",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$49.99",
+    "idiomas_disponiveis": [
+      "Português",
+      "Francês",
+      "Italiano"
+    ],
+    "id": 14
+  },
+  {
+    "titulo": "Samurai Sombrio",
+    "genero": "Ação",
+    "desenvolvedor": "Katana Games",
+    "data_lancamento": "2022-08-08",
+    "classificacao_indicativa": "14",
+    "plataforma": "PlayStation 5",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$189.90",
+    "idiomas_disponiveis": [
+      "Português",
+      "Japonês"
+    ],
+    "id": 15
+  },
+  {
+    "titulo": "Corrida Subaquática",
+    "genero": "Corrida",
+    "desenvolvedor": "AquaPlay",
+    "data_lancamento": "2021-03-03",
+    "classificacao_indicativa": "L",
+    "plataforma": "Mobile",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$74.50",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês"
+    ],
+    "id": 16
+  },
+  {
+    "titulo": "Império dos Dragões",
+    "genero": "RPG",
+    "desenvolvedor": "Fogo & Gelo",
+    "data_lancamento": "2020-12-12",
+    "classificacao_indicativa": "12",
+    "plataforma": "PC",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$159.99",
+    "idiomas_disponiveis": [
+      "Português",
+      "Espanhol",
+      "Alemão"
+    ],
+    "id": 17
+  },
+  {
+    "titulo": "Invasão Alienígena",
+    "genero": "Estratégia",
+    "desenvolvedor": "Xeno Studios",
+    "data_lancamento": "2023-05-05",
+    "classificacao_indicativa": "14",
+    "plataforma": "Xbox Series X",
+    "modo_de_jogo": "Ambos",
+    "preco": "R$249.90",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Chinês"
+    ],
+    "id": 18
+  },
+  {
+    "titulo": "Aventura na Selva",
+    "genero": "Aventura",
+    "desenvolvedor": "Verde Games",
+    "data_lancamento": "2019-08-08",
+    "classificacao_indicativa": "L",
+    "plataforma": "Nintendo Switch",
+    "modo_de_jogo": "Singleplayer",
+    "preco": "R$99.99",
+    "idiomas_disponiveis": [
+      "Português",
+      "Francês"
+    ],
+    "id": 19
+  },
+  {
+    "titulo": "Corrida dos Drones",
+    "genero": "Esporte",
+    "desenvolvedor": "DronePlay",
+    "data_lancamento": "2022-02-02",
+    "classificacao_indicativa": "L",
+    "plataforma": "PlayStation 5",
+    "modo_de_jogo": "Multiplayer",
+    "preco": "R$119.90",
+    "idiomas_disponiveis": [
+      "Português",
+      "Inglês",
+      "Espanhol"
+    ],
+    "id": 20
+  }
+]

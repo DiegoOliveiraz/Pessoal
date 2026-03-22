@@ -1,0 +1,64 @@
+algoritmo "FormacaoMatrizes"
+var
+   A, B, C: vetor[1..3, 1..3] de real
+   i, j: inteiro
+
+inicio
+   // Leitura da Matriz A
+   escreval("Digite os elementos da matriz A 3x3 (apenas valores positivos):")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         repita
+            escreva("A[", i, ",", j, "]: ")
+            leia(A[i,j])
+         ate A[i,j] > 0
+      fimpara
+   fimpara
+   
+   // Formação da Matriz B
+   // Cada elemento B[i,j] = A[i,j]^(i+j)
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         B[i,j] <- A[i,j] ^ (i+j)
+      fimpara
+   fimpara
+   
+   // Formação da Matriz C
+   // Cada elemento C[i,j] = A[i,j]^A[j,j] (diagonal principal da coluna j)
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         C[i,j] <- A[i,j] ^ A[j,j]
+      fimpara
+   fimpara
+   
+   // Impressão da Matriz A
+   escreval()
+   escreval("Matriz A:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva(A[i,j]:6:2)
+      fimpara
+      escreval()
+   fimpara
+   
+   // Impressão da Matriz B
+   escreval()
+   escreval("Matriz B:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva(B[i,j]:6:2)
+      fimpara
+      escreval()
+   fimpara
+   
+   // Impressão da Matriz C
+   escreval()
+   escreval("Matriz C:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva(C[i,j]:6:2)
+      fimpara
+      escreval()
+   fimpara
+
+fimalgoritmo

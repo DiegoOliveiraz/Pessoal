@@ -1,0 +1,90 @@
+ Respostas da Atividade (Avaliação dos Resultados)  
+
+ 1. Tabela-verdade da porta NAND  
+
+| A (Switch 1) | B (Clock) | Saída NAND |
+|--------------|-----------|------------|
+| 0            | 0         | 1          |
+| 1            | 0         | 1          |
+| 0            | 1         | 1          |
+| 1            | 1         | 0          |
+
+Explicação:  
+A porta NAND é o inverso da AND. Sua saída só será 0 quando todas as entradas forem 1.  
+
+---
+
+ 2. Tabela-verdade da porta NOR  
+
+| A (Porta NAND) | B (Switch 2) | Saída NOR |
+|----------------|--------------|-----------|
+| 0              | 0            | 1         |
+| 1              | 0            | 0         |
+| 0              | 1            | 0         |
+| 1              | 1            | 0         |
+
+Explicação:  
+A porta NOR é o inverso da OR. Sua saída só será 1 quando todas as entradas forem 0.  
+
+---
+
+ 3. Tabela-verdade do circuito completo  
+
+| A (Switch 1) | B (Clock) | C (Switch 2) | Saída (LED) |
+|--------------|-----------|--------------|-------------|
+| 0            | 0         | 0            | 1           |
+| 1            | 0         | 0            | 0           |
+| 0            | 1         | 0            | 0           |
+| 1            | 1         | 0            | 0           |
+| 0            | 0         | 1            | 0           |
+| 1            | 0         | 1            | 0           |
+| 0            | 1         | 1            | 0           |
+| 1            | 1         | 1            | 0           |
+
+Explicação:  
+O LED só acende (1) quando:  
+- Switch 1 (A) = 0  
+- Clock (B) = 0  
+- Switch 2 (C) = 0  
+Nesse caso, a saída da NAND será 1 (pois A=0 e B=0), e a NOR receberá 1 (NAND) + 0 (Switch 2), resultando em 0 (que, após inversão, aciona o LED como 1).  
+
+---
+
+ 4. Em quais casos o LED pisca?  
+O LED pisca apenas quando:  
+- Switch 1 (A) = 0  
+- Clock (B) = 0  
+- Switch 2 (C) = 0  
+
+Por quê?  
+Nessa configuração, a NAND gera 1, e a NOR recebe 1 (NAND) + 0 (Switch 2), resultando em 0 (que, invertido, aciona o LED como 1).  
+
+---
+
+ 5. Por que o LED só pisca em determinadas posições?  
+O LED só pisca na combinação A=0, B=0, C=0 porque:  
+1. NAND (A=0, B=0) = 1 (já que NAND só dá 0 se todas as entradas forem 1).  
+2. NOR (NAND=1, C=0) = 0 (NOR só dá 1 se todas as entradas forem 0).  
+3. O LED recebe 0 (NOR), mas como ele é ativado por nível lógico alto (1), o circuito deve ser ajustado para inverter o sinal ou usar um LED com lógica invertida.  
+
+---
+
+ 6. Portas NAND e NOR podem ser usadas como chaves eletrônicas?  
+Resposta: Sim.  
+
+Justificativa:  
+- Porta NAND: Pode ser usada como um "interruptor lógico" que desliga (0) apenas quando todas as entradas estão em 1.  
+- Porta NOR: Pode ser usada como um "interruptor lógico" que liga (1) apenas quando todas as entradas estão em 0.  
+- Aplicações:  
+  - NAND em sistemas de segurança (ex.: alarme só desliga se todas as entradas forem 1).  
+  - NOR em sistemas de ativação (ex.: motor só liga se todos os sensores estiverem em 0).  
+
+---
+
+ Conclusão  
+Este experimento reforçou o funcionamento das portas lógicas NAND e NOR e sua aplicação em circuitos digitais. A análise das tabelas-verdade e do comportamento do LED demonstrou como combinações de entradas afetam a saída, essencial para projetos de automação e eletrônica digital.  
+
+Dica para relatório:  
+- Inclua imagens do circuito simulado.  
+- Compare os resultados teóricos com os observados no simulador.  
+- Discuta possíveis aplicações práticas (ex.: controle de iluminação, alarmes).

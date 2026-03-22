@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação dos Critérios Ergonômicos - Script II</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 24px;
+            border: 2px solid #444;
+        }
+        th, td {
+            border-right: 1px solid #888;
+            border-bottom: 1px solid #888;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #eaeaea;
+            border-top: 2px solid #444;
+            border-bottom: 2px solid #444;
+        }
+        tr:last-child td {
+            border-bottom: 2px solid #444;
+        }
+        td:first-child, th:first-child {
+            border-left: 2px solid #444;
+        }
+        td:last-child, th:last-child {
+            border-right: 2px solid #444;
+        }
+        .instructions {
+            background: #f0f6ff;
+            border-left: 4px solid #1976d2;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .obs {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 16px;
+        }
+        @media print {
+            tr, td, th {
+                page-break-inside: avoid !important;
+            }
+            body {
+                background: #fff !important;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 8px !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+            .instructions {
+                background: none !important;
+                border: none !important;
+                color: #222 !important;
+                padding: 4px !important;
+            }
+            h1 {
+                font-size: 1.5em !important;
+                margin-bottom: 12px !important;
+            }
+            table {
+                width: 100% !important;
+                font-size: 0.95em !important;
+                margin-bottom: 8px !important;
+            }
+            th, td {
+                padding: 6px !important;
+                border-right: 1px solid #444 !important;
+                border-bottom: 1px solid #444 !important;
+            }
+            th {
+                background: #eee !important;
+                color: #222 !important;
+                border-top: 2px solid #444 !important;
+                border-bottom: 2px solid #444 !important;
+            }
+            tr:last-child td {
+                border-bottom: 2px solid #444 !important;
+            }
+            td:first-child, th:first-child {
+                border-left: 2px solid #444 !important;
+            }
+            td:last-child, th:last-child {
+                border-right: 2px solid #444 !important;
+            }
+            img {
+                max-width: 300px !important;
+                height: auto !important;
+                display: block;
+                margin: 0 auto;
+            }
+            .obs {
+                font-size: 0.9em !important;
+                color: #222 !important;
+                margin-top: 8px !important;
+            }
+            @page {
+                margin: 18mm 10mm 18mm 10mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análise dos Critérios Ergonômicos na Interface do Projeto Script II</h1>
+        <div class="instructions">
+            <strong>Instruções:</strong><br>
+            1. Liste os 8 Critérios Ergonômicos e verifique se o projeto Script II atende a cada critério.<br>
+            2. Elabore um slide apresentando uma tabela com as seguintes colunas: critério, aplicação no projeto, tela do protótipo, sugestão (caso não tenha sido aplicado ao projeto), autor.<br>
+            3. Façam para <strong>TODOS</strong> os Critérios Ergonômicos e 3 signos (1 de cada tipo).<br>
+            4. Envie também um arquivo em PDF para garantir a visualização.<br>
+            <br>
+            <strong>Status:</strong> ✅ Completo - 8 Critérios Ergonômicos + 3 Signos analisados<br><br>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Critério Ergonômico</th>
+                    <th>Descrição da aplicação</th>
+                    <th>Imagem</th>
+                    <th>Sugestão da aplicação</th>
+                    <th>Autor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td><b>Gestão de erros</b></td>
+                    <td>Aplicado nas telas de cadastro e login com validação de campos obrigatórios e formato de dados</td>
+                    <td><img src="cadastro e login.png" alt="Cadastro/Login" width="500" height="500"></td>
+                    <td>Implementar mensagens claras de erro para campos obrigatórios e senhas inválidas</td>
+                    <td>Diego Oliveira</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td><b>Compatibilidade</b></td>
+                    <td>O site apresenta design responsivo funcionando em diferentes dispositivos e navegadores</td>
+                    <td><img src="responsivo.png" alt="Compatibilidade" width="500" height="500"></td>
+                    <td>Melhorar o header para dispositivos móveis e otimizar carregamento</td>
+                    <td>Douglas Santos</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td ><b>Flexibilidade</b></td>
+                    <td>Usuário possui múltiplas opções de navegação e acesso aos diferentes serviços da plataforma</td>
+                    <td><img src="serviços.png" alt="Serviços disponíveis" width="500" height="500"></td>
+                    <td>Adicionar filtros de busca por categoria de serviço e ordenação</td>
+                    <td>Gabriel Elias</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td><b>Consistência</b></td>
+                    <td>Layout, paleta de cores, tipografia e elementos visuais são mantidos consistentes em todas as páginas</td>
+                    <td><img src="consistencia.png" alt="Consistência" width="500" height="500"></td>
+                    <td>Padronizar ícones, botões e espaçamentos entre elementos</td>
+                    <td>Lucas Menegaz</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td><b>Controle do Usuário</b></td>
+                    <td>Usuário possui autonomia para navegar entre páginas, voltar e controlar sua experiência no sistema</td>
+                    <td><img src="fluir.png" alt="Controle do Usuário" width="500" height="500"></td>
+                    <td>Adicionar botão de desfazer/voltar nas ações, assim como retornar ao clicar no logo</td>
+                    <td>Luis Filipe</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td><b>Simplicidade</b></td>
+                    <td>Interface apresenta design limpo e minimalista, com informações organizadas e objetivas</td>
+                    <td><img src="limpa.png" alt="Simplicidade" width="500" height="500"></td>
+                    <td>Reduzir textos longos nas dicas de carreira e simplificar formulários</td>
+                    <td>Gustavo</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td><b>Feedback</b></td>
+                    <td>Sistema fornece retorno visual ao usuário sobre suas ações e status das operações</td>
+                    <td><img src="cadastro e login.png" alt="Feedback" width="500" height="500"></td>
+                    <td>Implementar indicadores de carregamento e confirmações de ações realizadas</td>
+                    <td>Diego Oliveira</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td><b>Orientação</b></td>
+                    <td>Interface oferece orientação clara sobre localização e navegação do usuário</td>
+                    <td><img src="fluir.png" alt="Orientação" width="500" height="500"></td>
+                    <td>Adicionar breadcrumbs e indicadores de página atual no menu</td>
+                    <td>Luis Filipe</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td><b>Signo 1 (Ícone)</b></td>
+                    <td>Ícone de empresa representa cadastro de novos negócios</td>
+                    <td><img src="logo.png" alt="Signo 1" width="500" height="500"></td>
+                    <td>Utilizar a função de retornar a página principal(home page)</td>
+                    <td>Douglas Santos</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td><b>Signo 2 (Índice)</b></td>
+                    <td>Imagem de cadastro indica funcionalidade de registro no sistema</td>
+                    <td><img src="cadastro.png" alt="Signo 2" width="500" height="500"></td>
+                    <td>Adicionar botões de cadastro mais intuitivos e visíveis</td>
+                    <td>Elaborado pelo grupo</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td><b>Signo 3 (Símbolo)</b></td>
+                    <td>Ícone de modo escuro permite alternar entre temas claro e escuro</td>
+                    <td><img src="modoescuro.png" alt="Signo 3" width="500" height="500"></td>
+                    <td>Torná-lo mais adequado à responsividade e posicionamento</td>
+                    <td>Elaborado pelo grupo</td>
+                </tr>
+            </tbody>
+        </table>
+     
+</body>
+</html>

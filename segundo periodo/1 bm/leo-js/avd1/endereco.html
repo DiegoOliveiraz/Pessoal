@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Endereço - AVD1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+        font-size: 14px;
+      }
+
+      .required {
+        color: #e74c3c;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e1e8ed;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background-color: #f8f9fa;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #667eea;
+        background-color: white;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      input.error {
+        border-color: #e74c3c;
+        background-color: #fdf2f2;
+      }
+
+      input.success {
+        border-color: #27ae60;
+        background-color: #f0f9f4;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .btn-submit:active {
+        transform: translateY(0);
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 12px;
+        color: #888;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+          margin: 10px;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Animação para campos válidos */
+      @keyframes successPulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.02);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      input.success {
+        animation: successPulse 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📍 Cadastro de Endereço</h1>
+
+      <form id="enderecoForm">
+        <div class="form-group">
+          <label for="cep">CEP <span class="required">*</span></label>
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            placeholder="00000-000"
+            maxlength="9"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="logradouro"
+            >Logradouro <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="logradouro"
+            name="logradouro"
+            placeholder="Ex: Rua das Flores"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="numero">Número <span class="required">*</span></label>
+            <input
+              type="text"
+              id="numero"
+              name="numero"
+              placeholder="123"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="uf">UF <span class="required">*</span></label>
+            <input
+              type="text"
+              id="uf"
+              name="uf"
+              placeholder="SP"
+              maxlength="2"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="complemento">Complemento</label>
+          <input
+            type="text"
+            id="complemento"
+            name="complemento"
+            placeholder="Ex: Apto 101, Bloco A (opcional)"
+          />
+        </div>
+
+        <button type="submit" class="btn-submit">Cadastrar Endereço</button>
+      </form>
+
+      <div class="footer">
+        <p>AVD1 - JavaScript ES6+ com Validações</p>
+      </div>
+    </div>
+
+    <script>
+      // Seleção de elementos
+      const form = document.getElementById("enderecoForm");
+      const cepInput = document.getElementById("cep");
+      const logradouroInput = document.getElementById("logradouro");
+      const numeroInput = document.getElementById("numero");
+      const ufInput = document.getElementById("uf");
+      const complementoInput = document.getElementById("complemento");
+
+      // Regex patterns
+      const cepRegex = /^(\d{5})-?(\d{3})$/;
+      const ufRegex = /^[A-Z]{2}$/;
+      const numeroRegex = /^\d+$/;
+
+      // Função para aplicar máscara no CEP usando grupos de captura
+      const aplicarMascaraCEP = (valor) => {
+        // Remove tudo que não é dígito
+        const apenasDigitos = valor.replace(/\D/g, "");
+
+        // Aplica a máscara usando regex com grupos de captura
+        const match = apenasDigitos.match(/^(\d{0,5})(\d{0,3})$/);
+
+        if (match) {
+          const [, grupo1, grupo2] = match;
+          if (grupo2) {
+            return `${grupo1}-${grupo2}`;
+          }
+          return grupo1;
+        }
+
+        return apenasDigitos;
+      };
+
+      // Função para validar CEP
+      const validarCEP = (cep) => {
+        const cepLimpo = cep.replace(/\D/g, "");
+
+        if (!cepLimpo) {
+          return { valido: false, mensagem: "CEP é obrigatório!" };
+        }
+
+        if (cepLimpo.length !== 8) {
+          return { valido: false, mensagem: "CEP deve ter 8 dígitos!" };
+        }
+
+        if (!cepRegex.test(cep)) {
+          return {
+            valido: false,
+            mensagem: "CEP deve estar no formato 00000-000!",
+          };
+        }
+
+        return { valido: true, mensagem: "" };
+      };
+
+      // Função para validar logradouro
+      const validarLogradouro = (logradouro) => {
+        const logradouroTrim = logradouro.trim();
+
+        if (!logradouroTrim) {
+          return { valido: false, mensagem: "Logradouro é obrigatório!" };
+        }
+
+        if (logradouroTrim.length < 5) {
+          return {
+            valido: false,
+            mensagem: "Logradouro deve ter pelo menos 5 caracteres!",
+          };
+        }
+
+        return { valido: true, mensagem: "" };
+      };
+
+      // Função para validar número
+      const validarNumero = (numero) => {
+        const numeroTrim = numero.trim();
+
+        if (!numeroTrim) {
+          return { valido: false, mensagem: "Número é obrigatório!" };
+        }
+
+        if (!numeroRegex.test(numeroTrim)) {
+          return {
+            valido: false,
+            mensagem: "Número deve conter apenas dígitos!",
+          };
+        }
+
+        return { valido: true, mensagem: "" };
+      };
+
+      // Função para validar UF
+      const validarUF = (uf) => {
+        const ufTrim = uf.trim().toUpperCase();
+
+        if (!ufTrim) {
+          return { valido: false, mensagem: "UF é obrigatório!" };
+        }
+
+        if (!ufRegex.test(ufTrim)) {
+          return {
+            valido: false,
+            mensagem:
+              "UF deve ter exatamente 2 letras maiúsculas (ex: SP, RJ, MG)!",
+          };
+        }
+
+        return { valido: true, mensagem: "" };
+      };
+
+      // Função para aplicar estilos visuais
+      const aplicarEstiloValidacao = (input, valido) => {
+        input.classList.remove("error", "success");
+
+        if (valido) {
+          input.classList.add("success");
+        } else {
+          input.classList.add("error");
+        }
+      };
+
+      // Event Listeners para máscaras e validações em tempo real
+
+      // CEP - Máscara automática
+      cepInput.addEventListener("input", (e) => {
+        const valorFormatado = aplicarMascaraCEP(e.target.value);
+        e.target.value = valorFormatado;
+
+        // Validação em tempo real
+        const validacao = validarCEP(valorFormatado);
+        aplicarEstiloValidacao(e.target, validacao.valido);
+      });
+
+      // UF - Converter para maiúsculo
+      ufInput.addEventListener("input", (e) => {
+        e.target.value = e.target.value.toUpperCase();
+
+        // Validação em tempo real
+        const validacao = validarUF(e.target.value);
+        aplicarEstiloValidacao(e.target, validacao.valido);
+      });
+
+      // Número - Apenas dígitos
+      numeroInput.addEventListener("input", (e) => {
+        // Remove caracteres não numéricos
+        e.target.value = e.target.value.replace(/\D/g, "");
+
+        // Validação em tempo real
+        const validacao = validarNumero(e.target.value);
+        aplicarEstiloValidacao(e.target, validacao.valido);
+      });
+
+      // Logradouro - Validação em tempo real
+      logradouroInput.addEventListener("input", (e) => {
+        const validacao = validarLogradouro(e.target.value);
+        aplicarEstiloValidacao(e.target, validacao.valido);
+      });
+
+      // Validação do formulário no submit
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Validar todos os campos
+        const validacaoCEP = validarCEP(cepInput.value);
+        const validacaoLogradouro = validarLogradouro(logradouroInput.value);
+        const validacaoNumero = validarNumero(numeroInput.value);
+        const validacaoUF = validarUF(ufInput.value);
+
+        // Aplicar estilos visuais
+        aplicarEstiloValidacao(cepInput, validacaoCEP.valido);
+        aplicarEstiloValidacao(logradouroInput, validacaoLogradouro.valido);
+        aplicarEstiloValidacao(numeroInput, validacaoNumero.valido);
+        aplicarEstiloValidacao(ufInput, validacaoUF.valido);
+
+        // Verificar se há erros
+        const erros = [];
+
+        if (!validacaoCEP.valido) erros.push(validacaoCEP.mensagem);
+        if (!validacaoLogradouro.valido)
+          erros.push(validacaoLogradouro.mensagem);
+        if (!validacaoNumero.valido) erros.push(validacaoNumero.mensagem);
+        if (!validacaoUF.valido) erros.push(validacaoUF.mensagem);
+
+        // Se há erros, exibir alertas
+        if (erros.length > 0) {
+          erros.forEach((erro) => {
+            alert(erro);
+          });
+          return;
+        }
+
+        // Se todos os campos são válidos
+        const enderecoCompleto = {
+          cep: cepInput.value,
+          logradouro: logradouroInput.value,
+          numero: numeroInput.value,
+          uf: ufInput.value,
+          complemento: complementoInput.value.trim() || "Não informado",
+        };
+
+        // Mensagem de sucesso
+        alert("Endereço cadastrado com sucesso!");
+
+        // Log dos dados (para demonstração)
+        console.log("Endereço cadastrado:", enderecoCompleto);
+
+        // Opcional: Limpar formulário após sucesso
+        // form.reset();
+        // document.querySelectorAll('input').forEach(input => {
+        //     input.classList.remove('success', 'error');
+        // });
+      });
+
+      // Melhorias de UX - Focar no próximo campo ao pressionar Enter
+      const inputs = [
+        cepInput,
+        logradouroInput,
+        numeroInput,
+        ufInput,
+        complementoInput,
+      ];
+
+      inputs.forEach((input, index) => {
+        input.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            if (index < inputs.length - 1) {
+              inputs[index + 1].focus();
+            } else {
+              form.querySelector('button[type="submit"]').click();
+            }
+          }
+        });
+      });
+
+      // Adicionar placeholder dinâmico para complemento
+      complementoInput.addEventListener("focus", () => {
+        if (!complementoInput.value) {
+          complementoInput.placeholder =
+            "Ex: Apto 101, Bloco A, Casa dos fundos...";
+        }
+      });
+
+      complementoInput.addEventListener("blur", () => {
+        if (!complementoInput.value) {
+          complementoInput.placeholder = "Ex: Apto 101, Bloco A (opcional)";
+        }
+      });
+    </script>
+  </body>
+</html>

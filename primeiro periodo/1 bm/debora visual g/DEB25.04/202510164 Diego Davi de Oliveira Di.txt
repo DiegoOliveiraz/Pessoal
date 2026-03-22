@@ -1,0 +1,238 @@
+202510164 Diego Davi de Oliveira Dias
+
+algoritmo "ReajusteSalarialXPTO"
+var
+   matricula: inteiro
+   nome: caractere
+   sexo: caractere
+   salario, salarioReajustado, maiorSalario, menorSalario, somaSalarios, somaSalariosF: real
+   totalFuncionarios, totalFuncionarias: inteiro
+   mediaSalarios, mediaSalariosF: real
+
+inicio
+   maiorSalario := 0
+   menorSalario := 999999
+   somaSalarios := 0
+   somaSalariosF := 0
+   totalFuncionarios := 0
+   totalFuncionarias := 0
+
+   repita
+      escreva("Digite a matrícula (0 para encerrar): ")
+      leia(matricula)
+
+      se matricula <> 0 entao
+         escreva("Digite o nome: ")
+         leia(nome)
+         escreva("Digite o sexo (M/F): ")
+         leia(sexo)
+         escreva("Digite o salário: ")
+         leia(salario)
+
+         // Aplica reajuste
+         se salario <= 4000 entao
+            salarioReajustado := salario * 1.6
+         senao
+            se salario <= 10000 entao
+               salarioReajustado := salario * 1.3
+            senao
+               salarioReajustado := salario * 1.1
+            fimse
+         fimse
+
+         // Atualiza estatísticas
+         se salarioReajustado > maiorSalario entao
+            maiorSalario := salarioReajustado
+         fimse
+
+         se salarioReajustado < menorSalario entao
+            menorSalario := salarioReajustado
+         fimse
+
+         somaSalarios := somaSalarios + salarioReajustado
+         totalFuncionarios := totalFuncionarios + 1
+
+         se sexo = "F" entao
+            somaSalariosF := somaSalariosF + salarioReajustado
+            totalFuncionarias := totalFuncionarias + 1
+         fimse
+      fimse
+   ate matricula = 0
+
+   // Calcula médias
+   se totalFuncionarios > 0 entao
+      mediaSalarios := somaSalarios / totalFuncionarios
+
+      se totalFuncionarias > 0 entao
+         mediaSalariosF := somaSalariosF / totalFuncionarias
+      senao
+         mediaSalariosF := 0
+      fimse
+   fimse
+
+   // Exibe resultados
+   escreval("Maior salário reajustado: ", maiorSalario:2:2)
+   escreval("Menor salário reajustado: ", menorSalario:2:2)
+   escreval("Média dos salários reajustados: ", mediaSalarios:2:2)
+   escreval("Média dos salários reajustados das funcionárias: ", mediaSalariosF:2:2)
+fimalgoritmo
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+algoritmo "PesquisaCaracteristicasFisicas"
+var
+   nome: caractere
+   sexo: caractere
+   corOlhos: caractere
+   idade, qtdFem, qtdMasc, totalPessoas, somaIdadeMulheres, somaIdadeTotal: inteiro
+   altura, somaAlturaHomens, somaAlturaTotal: real
+   mediaIdadeMulheres, mediaAlturaHomens, mediaIdadeTotal, mediaAlturaTotal: real
+
+inicio
+   qtdFem := 0
+   qtdMasc := 0
+   totalPessoas := 0
+   somaIdadeMulheres := 0
+   somaAlturaHomens := 0
+   somaIdadeTotal := 0
+   somaAlturaTotal := 0
+
+   repita
+      escreva("Digite o nome (FIM para encerrar): ")
+      leia(nome)
+
+      se nome <> "FIM" entao
+         escreva("Digite o sexo (M/F): ")
+         leia(sexo)
+         escreva("Digite a cor dos olhos (A/V/C): ")
+         leia(corOlhos)
+         escreva("Digite a idade: ")
+         leia(idade)
+         escreva("Digite a altura: ")
+         leia(altura)
+
+         // Atualiza totais gerais
+         totalPessoas := totalPessoas + 1
+         somaIdadeTotal := somaIdadeTotal + idade
+         somaAlturaTotal := somaAlturaTotal + altura
+
+         // Verifica condi  o a) Mulheres
+         se (sexo = "F") e (idade >= 15) e (altura > 1.50) e (corOlhos = "C") entao
+            qtdFem := qtdFem + 1
+         fimse
+
+         // Verifica condi  o b) Homens
+         se (sexo = "M") e (idade >= 17) e (altura > 1.70) e (corOlhos = "A") entao
+            qtdMasc := qtdMasc + 1
+         fimse
+
+         // Acumula para m dias espec ficas
+         se sexo = "F" entao
+            somaIdadeMulheres := somaIdadeMulheres + idade
+         senao
+            somaAlturaHomens := somaAlturaHomens + altura
+         fimse
+      fimse
+   ate nome = "FIM"
+
+   // Calcula m dias
+   se totalPessoas > 0 entao
+      mediaIdadeTotal := somaIdadeTotal / totalPessoas
+      mediaAlturaTotal := somaAlturaTotal / totalPessoas
+
+      se somaIdadeMulheres > 0 entao
+         mediaIdadeMulheres := somaIdadeMulheres / (totalPessoas - (totalPessoas - qtdFem))
+      fimse
+
+      se somaAlturaHomens > 0 entao
+         mediaAlturaHomens := somaAlturaHomens / (totalPessoas - qtdFem)
+      fimse
+   fimse
+
+   // Exibe resultados
+   escreval("a) Mulheres com idade =15, altura >1.50 e olhos castanhos: ", qtdFem)
+   escreval("b) Homens com idade =17, altura >1.70 e olhos azuis: ", qtdMasc)
+   escreval("c) M dia de idade das mulheres: ", mediaIdadeMulheres:2:2)
+   escreval("d) M dia de altura dos homens: ", mediaAlturaHomens:2:2)
+   escreval("e) M dia de todas as idades: ", mediaIdadeTotal:2:2)
+   escreval("f) M dia de todas as alturas: ", mediaAlturaTotal:2:2)
+fimalgoritmo
+------------------------------------------------------------------------------------------------------------------
+algoritmo "AnaliseDesempenhoEscolar"
+var
+   matricula: inteiro
+   nome: caractere
+   nota1, nota2, nota3, nota4, mediaAluno, somaMedias, maiorMedia, menorMedia: real
+   totalAlunos, aprovados, recuperacao, reprovados: inteiro
+   mediaGeral: real
+
+inicio
+   maiorMedia := 0
+   menorMedia := 10
+   somaMedias := 0
+   totalAlunos := 0
+   aprovados := 0
+   recuperacao := 0
+   reprovados := 0
+
+   repita
+      escreva("Digite a matrícula (0 para encerrar): ")
+      leia(matricula)
+
+      se matricula <> 0 entao
+         escreva("Digite o nome: ")
+         leia(nome)
+         escreva("Digite a nota 1: ")
+         leia(nota1)
+         escreva("Digite a nota 2: ")
+         leia(nota2)
+         escreva("Digite a nota 3: ")
+         leia(nota3)
+         escreva("Digite a nota 4: ")
+         leia(nota4)
+
+         // Calcula média do aluno
+         mediaAluno := (nota1 + nota2 + nota3 + nota4) / 4
+
+         // Atualiza estatísticas
+         se mediaAluno > maiorMedia entao
+            maiorMedia := mediaAluno
+         fimse
+
+         se mediaAluno < menorMedia entao
+            menorMedia := mediaAluno
+         fimse
+
+         somaMedias := somaMedias + mediaAluno
+         totalAlunos := totalAlunos + 1
+
+         // Classifica o aluno
+         se mediaAluno >= 7.0 entao
+            aprovados := aprovados + 1
+         senao
+            se mediaAluno >= 3.5 entao
+               recuperacao := recuperacao + 1
+            senao
+               reprovados := reprovados + 1
+            fimse
+         fimse
+
+         // Exibe dados do aluno
+         escreval("Matrícula: ", matricula)
+         escreval("Nome: ", nome)
+         escreval("Média anual: ", mediaAluno:2:2)
+      fimse
+   ate matricula = 0
+
+   // Calcula média geral
+   se totalAlunos > 0 entao
+      mediaGeral := somaMedias / totalAlunos
+   fimse
+
+   // Exibe resultados
+   escreval("Maior média da turma: ", maiorMedia:2:2)
+   escreval("Menor média da turma: ", menorMedia:2:2)
+   escreval("Total de alunos APROVADOS: ", aprovados)
+   escreval("Total de alunos em RECUPERAÇÃO: ", recuperacao)
+   escreval("Total de alunos REPROVADOS: ", reprovados)
+   escreval("Média geral da turma: ", mediaGeral:2:2)
+fimalgoritmo

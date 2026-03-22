@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1 style="font-family:Arial,Helvetica,sans-serif;">Cadastro de Requisitos</h1>
+
+<h2 style="font-family:Arial,Helvetica,sans-serif;">Requisitos Funcionais (RF)</h2>
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:12px; font-family:Arial,Helvetica,sans-serif; font-size:12px;">
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">IDENTIFICADOR</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">RF-001</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">CATEGORIA</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">Autenticação / Cadastro</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">REQUISITO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Cadastro de Profissional</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DE CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">15/09/2025</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Diego Davi</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">03/03/2026</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Equipe</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">VERSÃO</th>
+    <td style="border:1px solid #000;padding:6px;">1.0</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">PRIORIDADE</th>
+    <td style="border:1px solid #000;padding:6px;">Alta (A)</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">ATORES ENVOLVIDOS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Profissional Autônomo, Sistema</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">ENTRADAS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Nome completo, e-mail, telefone, CEP, cidade, UF, profissão, tempo de experiência, habilidades, disponibilidade, senha, aceite de termos</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">SAÍDAS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Conta criada em fastwork_users.profissionais, tela de confirmação com número de protocolo</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">REGRAS DE NEGÓCIO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Nome: 3–50 letras; e-mail único por tipo; telefone formato (XX) XXXXX-XXXX; CEP formato 00000-000; habilidades 10–500 chars; senha obrigatória; aceite de termos obrigatório</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DESCRIÇÃO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">O sistema deve permitir que um trabalhador autônomo crie uma conta na plataforma informando seus dados pessoais, profissionais e de acesso. Todos os campos obrigatórios devem ser validados antes do envio. Após o cadastro bem-sucedido, o sistema deve armazenar os dados no localStorage e redirecionar o usuário para a página de confirmação (validacao.html).</td>
+  </tr>
+</table>
+<div style="height:8px;"></div>
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:12px; font-family:Arial,Helvetica,sans-serif; font-size:12px;">
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">IDENTIFICADOR</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">RF-002</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">CATEGORIA</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">Autenticação / Cadastro</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">REQUISITO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Cadastro de Empresa</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DE CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">15/09/2025</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Diego Davi</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">03/03/2026</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Equipe</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">VERSÃO</th>
+    <td style="border:1px solid #000;padding:6px;">1.0</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">PRIORIDADE</th>
+    <td style="border:1px solid #000;padding:6px;">Alta (A)</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">ATORES ENVOLVIDOS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Representante de Empresa, Sistema</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">ENTRADAS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Nome Fantasia, Razão Social, CNPJ, e-mail, telefone, endereço, setor de atuação, senha</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">SAÍDAS</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Conta criada em fastwork_users.empresas, tela de confirmação</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">REGRAS DE NEGÓCIO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">CNPJ no formato XX.XXX.XXX/XXXX-XX; e-mail único entre empresas; nome 3–50 chars alfanuméricos; todos os campos obrigatórios</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DESCRIÇÃO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">O sistema deve permitir que uma empresa crie uma conta na plataforma informando seus dados corporativos e de acesso. O CNPJ deve ser validado com máscara automática. Os dados são persistidos no localStorage sob a chave fastwork_users.empresas. Em caso de erro, o campo respectivo deve exibir borda vermelha e animação de shake.</td>
+  </tr>
+</table>
+<div style="height:8px;"></div>
+
+<h2 style="font-family:Arial,Helvetica,sans-serif;">Requisitos Não Funcionais (RNF)</h2>
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:12px; font-family:Arial,Helvetica,sans-serif; font-size:12px;">
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">IDENTIFICADOR</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">RNF-001</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;width:15%;">CATEGORIA</th>
+    <td style="border:1px solid #000;padding:6px;width:35%;">Performance</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">REQUISITO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">Desempenho</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DE CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">15/09/2025</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA CRIAÇÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Diego Davi</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DATA DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">03/03/2026</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">AUTOR DA REVISÃO</th>
+    <td style="border:1px solid #000;padding:6px;">Equipe</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">VERSÃO</th>
+    <td style="border:1px solid #000;padding:6px;">1.0</td>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">PRIORIDADE</th>
+    <td style="border:1px solid #000;padding:6px;">Alta (A)</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #000;background:#e3f2fd;text-align:left;padding:6px;">DESCRIÇÃO</th>
+    <td colspan="3" style="border:1px solid #000;padding:6px;">O sistema deve carregar todas as páginas em até 3 segundos em conexões de banda larga padrão (≥ 10 Mbps). Recursos externos (Bootstrap, ícones, fontes) devem ser carregados via CDN para aproveitar cache do navegador. Imagens do projeto devem ser otimizadas com dimensões adequadas ao contexto de exibição.</td>
+  </tr>
+</table>
+<div style="height:8px;"></div>
+
+</body>
+</html>

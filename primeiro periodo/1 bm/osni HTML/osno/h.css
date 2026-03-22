@@ -1,0 +1,26 @@
+@charset "UTF - 8";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+.para{
+    font-family: fantasy ;
+    text-align: justify;
+
+}
+.imagem{  
+    border-radius: 5%;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    
+
+    
+}

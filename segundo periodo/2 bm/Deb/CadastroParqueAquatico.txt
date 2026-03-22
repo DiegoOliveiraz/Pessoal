@@ -1,0 +1,54 @@
+algoritmo "CadastroParqueAquatico"
+
+tipo
+   regData = registro
+      dia: inteiro
+      mes: inteiro
+      ano: inteiro
+   fimregistro
+
+   regEndereco = registro
+      rua: caractere
+      numero: inteiro
+      bairro: caractere
+      cidade: caractere
+      estado: caractere
+   fimregistro
+
+   regDependente = registro
+      nome: caractere
+      diaNasc: inteiro
+      mesNasc: inteiro
+      anoNasc: inteiro
+   fimregistro
+
+   regAssociado = registro
+      matricula: inteiro
+      nome: caractere
+      sexo: caractere
+      diaNasc: inteiro
+      mesNasc: inteiro
+      anoNasc: inteiro
+      rua: caractere
+      numero: inteiro
+      bairro: caractere
+      cidade: caractere
+      estado: caractere
+      dep1: regDependente
+      dep2: regDependente
+      dep3: regDependente
+      dep4: regDependente
+      dep5: regDependente
+      dep6: regDependente
+      dep7: regDependente
+      dep8: regDependente
+      dep9: regDependente
+      dep10: regDependente
+   fimregistro
+
+var
+   associados: vetor[1..1000] de regAssociado
+
+inicio
+
+fimalgoritmo

@@ -1,0 +1,9 @@
+@charset "uft-8";
+h1{
+    font-family: fantasy;
+    font-size: 50px;
+    text-align: center;
+    
+    background-color: blueviolet;
+    color: white
+}

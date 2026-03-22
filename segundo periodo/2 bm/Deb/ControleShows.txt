@@ -1,0 +1,25 @@
+algoritmo "ControleShows"
+
+tipo
+   regApresentacao = registro
+      local: caractere
+      dia: inteiro
+      mes: inteiro
+      ano: inteiro
+   fimregistro
+   
+   regShow = registro
+      descricao: caractere
+      apres1: regApresentacao
+      apres2: regApresentacao
+      apres3: regApresentacao
+      apres4: regApresentacaos
+      apres5: regApresentacao
+   fimregistro
+
+var
+   shows: vetor[1..10] de regShow
+
+inicio
+
+fimalgoritmo
