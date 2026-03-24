@@ -4,8 +4,8 @@ import JogoRoutes from './routes/jogoRoutes.js';
 
 const app = express();
 
-const PORT = 3000;
-const senhaBD = '123456';
+const PORT = process.env.PORT || 3000;
+const senhaBD = process.env.DB_PASS || '123456';
 
 app.use(basicRoutes)
 app.use(JogoRoutes)
