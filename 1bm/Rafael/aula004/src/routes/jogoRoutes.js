@@ -1,20 +1,16 @@
 import { Router } from "express";
-import {
-  getAllGames,
-  getGameById,
-  getGameByGenre,
-  getGameByRating,
-  getGameByLanguage,
-} from "../controllers/jogoController.js";
-import  jogoMiddleware  from "../middlewares/jogoMiddleware.js";
-const JogoRoutes = Router();
+import { getAllGames,getGameById,getGameByGenre,createGame } from "../controllers/jogoController.js";
+import jogoMiddleware from "../middlewares/jogoMiddleware.js";
 
-JogoRoutes.get("/jogos", getAllGames);
-JogoRoutes.get("/jogos/:id", jogoMiddleware.isValidId, getGameById);
-JogoRoutes.get("/jogos/genero/:genero", getGameByGenre);
-JogoRoutes.get(
-  "/jogos/classificacao/:classificacao_indicativa",
-  getGameByRating,
-);
-JogoRoutes.get("/jogos/idioma/:idiomas_disponiveis", getGameByLanguage);
-export default JogoRoutes;
+const jogoRoutes = Router()
+
+jogoRoutes.get("/jogos",getAllGames)
+jogoRoutes.get(
+    "/jogos/:id",
+    jogoMiddleware.isValidId,
+    jogoMiddleware.isPositiveId,
+    getGameById)
+jogoRoutes.get("/jogos/genero/:genero",getGameByGenre)
+jogoRoutes.post("/jogos/create",createGame)
+
+export default jogoRoutes
