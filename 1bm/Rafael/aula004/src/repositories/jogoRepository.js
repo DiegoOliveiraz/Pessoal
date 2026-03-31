@@ -1,31 +1,51 @@
-//importar dados
+//importar dados do banco
 import jogos from "../database/jogos.json" with { type: "json" };
-//ler dados dos jogos e criar funções para manipular os dados
+import fs from "fs";
+
 const jogoRepository = {
+  // Retorna todos os jogos
   readAll() {
     return jogos;
   },
-  //função para ler jogo por id
+  // Retorna um jogo específico pelo ID
   readById(id) {
     return jogos.find((j) => j.id == id);
   },
-  //função para ler o jogo por genero
-  readByGenre(genero) {
+  // Retorna todos os jogos de um gênero específico
+  readByGenre(genre) {
+    return jogos.filter((j) => j.genero.toUpperCase() === genre.toUpperCase());
+  },
+
+  // Retorna todos os jogos com uma classificação indicativa específica
+  readRating(classificacao_indicativa) {
     return jogos.filter(
-      (j) => j.genero.toLocaleLowerCase() == genero.toLocaleLowerCase(),
+      (j) => j.classificacao_indicativa == classificacao_indicativa,
     );
   },
-  //função para ler a classificação indicativa do jogo
-  readRating(classificacao_indicativa) {
-    return jogos.filter((j) => j.classificacao_indicativa == classificacao_indicativa);
-  },
+  // Retorna todos os jogos disponíveis em um idioma específico
   readLanguage(idiomas_disponiveis) {
-    return jogos.filter((j) => j.idiomas_disponiveis.includes(idiomas_disponiveis));
-  }
+    return jogos.filter((j) =>
+      j.idiomas_disponiveis.includes(idiomas_disponiveis),
+    );
+  },
 
-  //create(jogo){},
-  //edit(jogo){},
-  //delete(id){}
+  // Cria um novo jogo e salva no arquivo JSON
+  create(jogo) {
+    const newId = jogos[jogos.length -1].id + 1;
+    jogo.id = newId;
+    jogos.push(jogo);
+    fs.writeFileSync(
+      "./src/database/jogos.json",
+      JSON.stringify(jogos),
+      "utf-8",
+    );
+    return {
+      msg: "jogo inserido com sucesso",
+      data: jogo,
+    };
+  },
+  edit(jogo) {},
+  delete(id) {},
 };
 
 export default jogoRepository;
