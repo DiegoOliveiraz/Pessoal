@@ -13,5 +13,5 @@ app.use(jogoRoutes);
 
 // Iniciá o servidor na porta definida na variável de ambiente
 app.listen(PORT, () => {
-  console.log(`Servidor rodando da porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
