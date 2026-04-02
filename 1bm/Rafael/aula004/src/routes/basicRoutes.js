@@ -2,6 +2,7 @@ import { Router } from "express";
 
 const basicRoutes = Router();
 
+// Retorna informações básicas do sistema
 basicRoutes.get("/", (req, res) => {
   res.status(200).json({
     system: "Aula 004 Unifoa",
@@ -9,6 +10,7 @@ basicRoutes.get("/", (req, res) => {
   });
 });
 
+// Retorna informações sobre o projeto
 basicRoutes.get("/sobre", (req, res) => {
   res.status(200).json({
     system: "Aula 003 Unifoa",
@@ -16,8 +18,9 @@ basicRoutes.get("/sobre", (req, res) => {
     ano: 2026,
   });
 });
-
+// Recebe parâmetros via query string
 basicRoutes.get("/viaquery", (req, res) => {
+  console.table("🚀 ~ viaquery:", viaquery)
   const nome = req.query.nome;
   const idade = req.query.idade;
   //...
@@ -26,6 +29,7 @@ basicRoutes.get("/viaquery", (req, res) => {
     idade: idade,
   });
 });
+// Recebe parâmetros via URL
 basicRoutes.get("/viaparams/:nome/:idade", (req, res) => {
   const nome = req.params.nome;
   const idade = req.params.idade;
@@ -35,8 +39,9 @@ basicRoutes.get("/viaparams/:nome/:idade", (req, res) => {
     idade: idade,
   });
 });
+// Recebe parâmetros via body (POST)
 basicRoutes.post("/viabody", (req, res) => {
-  const {nome, idade} = req.body;
+  const { nome, idade } = req.body;
   //...
   res.json({
     nome: nome,
