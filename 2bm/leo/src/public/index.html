@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📋 To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📋 Minha Lista de Tarefas</h1>
+      <div class="stats">
+        <span id="totalTarefas" class="stat">Total: 0</span>
+        <span id="tarefasPendentes" class="stat pendente">Pendentes: 0</span>
+        <span id="tarefasConcluidas" class="stat concluida">Concluídas: 0</span>
+      </div>
+    </div>
+
+    <!-- Formulário para adicionar tarefa -->
+    <div class="form-container">
+      <input
+        type="text"
+        id="inputTarefa"
+        class="input-tarefa"
+        placeholder="Adicione uma nova tarefa..."
+        maxlength="200"
+      >
+      <button id="btnAdicionar" class="btn btn-add">➕ Adicionar</button>
+    </div>
+
+    <!-- Lista de tarefas -->
+    <div class="list-container">
+      <ul id="listaTarefas" class="tarefas-list">
+        <li class="empty-state">Nenhuma tarefa ainda. Crie uma! 🎯</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
