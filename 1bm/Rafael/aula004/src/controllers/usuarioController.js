@@ -1,4 +1,5 @@
 import usuarioRepository from "../repositories/usuarioRepository.js";
+import jwt from "jsonwebtoken"
 
 export async function loginUser(req,res){
     //pegar os dados para Autentificação
@@ -9,10 +10,18 @@ export async function loginUser(req,res){
     const usuario = await usuarioRepository.login(email,senha)
     //vindo diferente de null esta validado
     if(usuario!=undefined){
+        const user = {
+            id:usuario.id,
+            email:usuario.email,
+            acesso:usuario.acesso,
+        }
+        //criar um token
+        const token = jwt.sign(user, process.env.JWT_SECRET, )
         res.status(200).json({
             ok:true,
             msg: "usúario valido",
-            usuario: usuario
+            usuario: user,
+            token:token
         })
     }else{
         res.status(401).json({

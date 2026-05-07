@@ -1,3 +1,11 @@
+//verificar se o user é valido
+
+
+
+
+
+
+
 window.addEventListener("load", async (evnt) => {
   const res = await fetch("http://localhost:3000/jogos");
   const jogos = await res.json();
