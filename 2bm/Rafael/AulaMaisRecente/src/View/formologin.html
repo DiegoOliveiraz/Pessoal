@@ -1,18 +1,22 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <!-- Configurações básicas do documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <style>
+      /* Reset de estilos padrão do navegador */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
+      /* Importa fontes do Google Fonts */
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
+      /* Estilos do body (fundo da página) */
       body {
         font-family: "Poppins", sans-serif;
         background: linear-gradient(
@@ -20,14 +24,15 @@
           #667eea 0%,
           #764ba2 50%,
           #f093fb 100%
-        );
-        min-height: 100vh;
-        display: flex;
+        ); /* Gradiente vibrante */
+        min-height: 100vh; /* Altura mínima: 100% da viewport */
+        display: flex; /* Centraliza o formulário */
         justify-content: center;
         align-items: center;
         padding: 20px;
       }
 
+      /* Título da página (Login) */
       h1 {
         position: absolute;
         top: 30px;
@@ -37,24 +42,27 @@
         letter-spacing: 2px;
       }
 
+      /* Container para exibir mensagens de erro */
       .errors {
         position: fixed;
         top: 20px;
         right: 20px;
         max-width: 400px;
-        z-index: 1000;
+        z-index: 1000; /* Fica acima de todos os elementos */
       }
 
+      /* Estilo para cada mensagem de erro */
       .error-msg {
-        background: #c0392b;
+        background: #c0392b; /* Cor vermelha */
         color: #ffffff;
         padding: 15px 20px;
         border-radius: 10px;
         margin-bottom: 10px;
         box-shadow: 0 5px 20px rgba(192, 57, 43, 0.4);
-        animation: slideIn 0.3s ease-out;
+        animation: slideIn 0.3s ease-out; /* Animação de entrada */
       }
 
+      /* Animação: desliza a mensagem de erro da direita para a esquerda */
       @keyframes slideIn {
         from {
           transform: translateX(500px);
@@ -66,18 +74,20 @@
         }
       }
 
+      /* Estilos do formulário */
       form {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95); /* Branco semi-transparente */
+        backdrop-filter: blur(10px); /* Efeito de vidro fosco */
         padding: 50px 40px;
         border-radius: 20px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         width: 100%;
         max-width: 450px;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        animation: fadeInUp 0.6s ease-out;
+        animation: fadeInUp 0.6s ease-out; /* Animação de entrada */
       }
 
+      /* Animação: fade in com movimento para cima */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -89,6 +99,7 @@
         }
       }
 
+      /* Estilos das labels (Email, Senha) */
       label {
         display: block;
         font-weight: 600;
@@ -96,7 +107,7 @@
         font-size: 1.05em;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #4c51bf;
+        color: #4c51bf; /* Azul */
       }
 
       input {
@@ -227,9 +238,15 @@
     </style>
   </head>
   <body>
+    <!-- Título da página -->
     <h1>Login</h1>
+
+    <!-- Container para exibir mensagens de erro -->
     <div class="errors"></div>
+
+    <!-- Formulário de Login -->
     <form id="frm" action="" method="post">
+      <!-- Campo de Email -->
       <label for="email">Email:</label>
       <input
         type="email"
@@ -239,13 +256,21 @@
         required
       />
       <br /><br />
+
+      <!-- Campo de Senha -->
       <label for="senha">Senha:</label>
       <input type="password" name="senha" id="senha" required />
       <br /><br />
+
+      <!-- Botão para enviar o formulário -->
       <button type="submit">Enviar</button>
       <br /><br />
+
+      <!-- Botão para limpar os campos -->
       <button type="reset">Limpar</button>
     </form>
+
+    <!-- Script de lógica do login (evento de submit) -->
     <script src="login.js"></script>
   </body>
 </html>
