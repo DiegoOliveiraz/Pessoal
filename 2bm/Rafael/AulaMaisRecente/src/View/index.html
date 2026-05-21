@@ -1,22 +1,18 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <!-- Configurações básicas do documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>teste de acesso</title>
     <style>
-      /* Reset de estilos padrão do navegador */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* Importa fontes do Google Fonts */
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap");
 
-      /* Estilos do body (fundo da página) */
       body {
         font-family: "Poppins", "Segoe UI", sans-serif;
         background: linear-gradient(
@@ -24,15 +20,14 @@
           #667eea 0%,
           #764ba2 50%,
           #f093fb 100%
-        ); /* Gradiente vibrante */
-        background-attachment: fixed; /* Fundo fixo ao fazer scroll */
-        min-height: 100vh; /* Altura mínima: 100% da viewport */
+        );
+        background-attachment: fixed;
+        min-height: 100vh;
         padding: 60px 20px;
         position: relative;
         overflow-x: hidden;
       }
 
-      /* Camada decorativa de efeito de vidro no background */
       body::before {
         content: "";
         position: fixed;
@@ -51,11 +46,10 @@
             rgba(255, 255, 255, 0.05) 0%,
             transparent 50%
           );
-        pointer-events: none; /* Permite que cliques passem através */
+        pointer-events: none;
         z-index: 0;
       }
 
-      /* Título principal da página */
       h1 {
         text-align: center;
         color: white;
@@ -66,10 +60,9 @@
         font-weight: 800;
         position: relative;
         z-index: 1;
-        animation: fadeInDown 0.8s ease-out; /* Animação de entrada */
+        animation: fadeInDown 0.8s ease-out;
       }
 
-      /* Animação: fade in com movimento para baixo */
       @keyframes fadeInDown {
         from {
           opacity: 0;
@@ -81,13 +74,9 @@
         }
       }
 
-      /* Container grid para exibir os jogos */
       .Jogos {
         display: grid;
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(320px, 1fr)
-        ); /* Grid responsivo */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 40px;
         max-width: 1400px;
         margin: 0 auto;
@@ -95,16 +84,15 @@
         z-index: 1;
       }
 
-      /* Card individual do jogo */
       .jogo {
-        background: rgba(255, 255, 255, 0.95); /* Branco semi-transparente */
-        backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 35px;
         box-shadow:
           0 20px 60px rgba(0, 0, 0, 0.25),
-          0 0 40px rgba(102, 126, 234, 0.1); /* Sombra dupla */
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transição suave */
+          0 0 40px rgba(102, 126, 234, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         border: 2px solid rgba(255, 255, 255, 0.5);
         overflow: hidden;
         position: relative;
@@ -214,7 +202,6 @@
         box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
       }
 
-      /* Responsivo */
       @media (max-width: 768px) {
         h1 {
           font-size: 2.5em;
@@ -276,14 +263,10 @@
     </style>
   </head>
   <body>
-    <!-- Título principal da página -->
     <h1>Jogos</h1>
 
-    <!-- Container (section) que será preenchido dinamicamente com os jogos -->
-    <!-- Os jogos são inseridos via JavaScript (fetch da API) -->
     <section class="Jogos"></section>
 
-    <!-- Script que carrega os jogos da API e exibe na página -->
     <script src="script.js"></script>
   </body>
 </html>
