@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "email": "admin1@example.com",
+    "senha": "Admin@123",
+    "acesso": "admin"
+  },
+  {
+    "id": 2,
+    "email": "user1@example.com",
+    "senha": "User@123",
+    "acesso": "user"
+  },
+  {
+    "id": 3,
+    "email": "admin2@example.com",
+    "senha": "Admin@456",
+    "acesso": "admin"
+  },
+  {
+    "id": 4,
+    "email": "user2@example.com",
+    "senha": "User@456",
+    "acesso": "user"
+  },
+  {
+    "id": 5,
+    "email": "user3@example.com",
+    "senha": "User@789",
+    "acesso": "user"
+  },
+  {
+    "id": 6,
+    "email": "admin3@example.com",
+    "senha": "Admin@789",
+    "acesso": "admin"
+  },
+  {
+    "id": 7,
+    "email": "user4@example.com",
+    "senha": "User@321",
+    "acesso": "user"
+  },
+  {
+    "id": 8,
+    "email": "user5@example.com",
+    "senha": "User@654",
+    "acesso": "user"
+  },
+  {
+    "id": 9,
+    "email": "admin4@example.com",
+    "senha": "Admin@321",
+    "acesso": "admin"
+  },
+  {
+    "id": 10,
+    "email": "user6@example.com",
+    "senha": "User@987",
+    "acesso": "user"
+  }
+]
