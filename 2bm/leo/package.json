@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "docx": "^9.7.1",
     "uuid": "^14.0.0"
   }
 }
