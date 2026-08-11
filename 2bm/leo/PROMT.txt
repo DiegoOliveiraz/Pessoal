@@ -1,0 +1,97 @@
+Crie um material de estudo completo com base nas questões fornecidas e nos arquivos de apoio disponibilizados.
+
+
+
+Requisitos gerais:
+
+
+
+1. Organize o conteúdo por tópicos e subtemas.
+
+2. Explique cada assunto de forma clara, didática e aprofundada.
+
+3. Destaque definições, conceitos-chave, comandos, fórmulas, regras e boas práticas.
+
+4. Utilize exemplos práticos para facilitar a compreensão.
+
+5. Inclua resumos, tabelas comparativas e esquemas sempre que forem úteis.
+
+6. Priorize os assuntos mais recorrentes e relevantes para a avaliação.
+
+
+
+Uso dos materiais:
+
+
+
+* Utilize as questões enviadas como base principal do material.
+
+* Utilize também o arquivo "Arquiteturas_Software_Completo_35Q.pdf", que foi usado para a primeira prova.
+
+* O conteúdo desse PDF deve servir como apoio teórico e revisão de conceitos fundamentais.
+
+* Crie no máximo 2 questões relacionadas exclusivamente ao conteúdo do PDF, apenas para revisão e reforço dos conceitos já estudados.
+
+* As demais questões devem focar prioritariamente no conteúdo da prova atual e nos assuntos presentes nas questões fornecidas.
+
+
+
+Questões:
+
+
+
+* Utilize todas as questões enviadas.
+
+* Complete a lista até atingir exatamente 35 questões.
+
+* As questões adicionadas devem manter o mesmo estilo, nível de dificuldade e abordagem das questões originais.
+
+
+
+Para cada questão:
+
+
+
+* Apresente o enunciado completo.
+
+* Forneça alternativas (A, B, C, D e E), quando aplicável.
+
+* Informe o gabarito.
+
+* Explique detalhadamente por que a alternativa correta está certa.
+
+* Explique por que as demais alternativas estão erradas.
+
+* Inclua uma dica de memorização, macete ou observação importante para provas.
+
+
+
+Estrutura do material:
+
+
+
+1. Introdução aos conteúdos cobrados.
+
+2. Resumo teórico completo.
+
+3. Tabelas-resumo dos principais conceitos.
+
+4. Questões de fixação (35 questões).
+
+5. Gabarito comentado detalhado.
+
+6. Principais erros que os alunos costumam cometer.
+
+7. Revisão rápida para a prova.
+
+8. Mapa mental em formato textual.
+
+9. Checklist final de revisão.
+
+
+
+Objetivo:
+
+
+
+Produzir um material de estudo completo, aprofundado e focado em aprovação, permitindo compreender a teoria, praticar questões e revisar os pontos mais importantes da disciplina.
