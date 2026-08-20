@@ -1,0 +1,575 @@
+Exercício de Revisão – Serviços de Redes de Computadores (SRC)
+
+ 
+
+Questão 1 – TCP e UDP
+
+Uma empresa está desenvolvendo diferentes aplicações de rede. Para cada situação abaixo, indique qual protocolo de transporte seria mais adequado (TCP ou UDP) e justifique sua escolha.
+
+a) Transmissão de uma chamada de voz em tempo real pela internet.
+b) Transferência de um documento jurídico que não pode sofrer perda de informações.
+c) Envio contínuo de dados de sensores de temperatura de uma fábrica, em que pequenas perdas são aceitáveis.
+ 
+
+Questão 2 – Controle de comunicação na camada de transporte
+Explique a diferença entre um protocolo orientado à conexão e um protocolo não orientado à conexão. Em sua resposta, descreva como essa característica influencia a confiabilidade e o desempenho das aplicações.
+
+ 
+
+ 
+
+Questão 3 – Portas de rede e serviços
+Uma equipe de suporte está analisando um servidor corporativo que possui os seguintes serviços ativos
+
+Servidor Web seguro;
+Serviço de resolução de nomes;
+Serviço de acesso remoto por terminal seguro.
+Pesquise e identifique quais portas de rede são normalmente utilizadas por esses serviços e explique a função de cada uma.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Questão 4 – Funcionamento do DHCP
+
+Uma estação de trabalho foi conectada pela primeira vez a uma rede corporativa e recebeu automaticamente as seguintes informações
+
+Endereço IP;
+Máscara de sub-rede;
+Gateway padrão;
+Servidor DNS.
+Explique o papel do serviço DHCP nesse processo e descreva a sequência básica de comunicação utilizada entre o cliente e o servidor para que a configuração seja realizada.
+
+ 
+
+Questão 5 – VLANs e segmentação de rede
+
+Uma escola deseja separar sua rede em três grupos
+
+Administração;
+Professores;
+Laboratório de Informática.
+Explique o conceito de VLAN e descreva quais vantagens a utilização dessa tecnologia traz para o desempenho, organização e segurança da rede.
+
+ 
+
+Questão 6 – Diagnóstico de problemas de acesso
+Um computador consegue acessar páginas web digitando diretamente o endereço IP do servidor, mas não consegue acessá-las utilizando o nome do domínio.
+
+Sem considerar problemas físicos de rede, explique qual serviço deve ser investigado primeiro e justifique sua resposta.
+
+
+
+
+
+
+
+Questão 7 – Classes de endereçamento IPv4
+Analise os seguintes endereços IP e identifique
+
+A classe do endereço;
+A máscara padrão da classe;
+Se o endereço pertence a uma rede pública ou privada.
+a) 10.25.30.40
+b) 172.20.100.5
+c) 192.168.10.200
+d) 200.100.50.25
+ httpswww.instagram.compDNflYkAO2w8
+
+Questão 8 – Planejamento de sub-redes
+Uma empresa recebeu a rede
+
+192.168.50.024
+
+O administrador precisa dividi-la em 4 sub-redes de mesmo tamanho.
+
+Determine
+
+a) Qual será a nova máscara de sub-rede
+b) Quantas sub-redes foram criadas
+c) Qual o intervalo de endereços de cada sub-rede.
+d) Quantos hosts válidos cada sub-rede poderá possuir
+ 
+
+Questão 9 – Diagnóstico de comunicação entre computadores
+Em um laboratório de redes existem os seguintes computadores
+
+Computador A
+IP 192.168.1.10
+Máscara 255.255.255.0
+Computador B
+IP 192.168.2.20
+Máscara 255.255.255.0
+Os dois computadores estão conectados ao mesmo switch, porém não conseguem se comunicar utilizando o comando ping.
+
+Responda
+
+a) Os computadores pertencem à mesma rede Justifique realizando o cálculo da rede.
+b) Qual alteração poderia ser realizada para permitir a comunicação sem a utilização de um roteador
+-------------------------------------------
+Atividade Pré-Aula.
+Tema: Camada Física e Camada de Enlace
+1. Atividade.
+Reflita e responda 
+Pergunta 1
+
+Quando você envia uma mensagem pelo celular ou computador, como você imagina que essa informação sai de um dispositivo e chega ao outro?
+Responda em 3–5 linhas.
+
+
+
+
+2. Atividade
+Analise 3 ideias principais :
+A) Camada Física
+Responda:
+•O que a camada física faz em uma rede?
+•Quais são 3 tipos de sinais ou meios de transmissão utilizados?
+•Cite um exemplo de tecnologia que usa essa camada.
+
+B) Camada de Enlace
+Responda:
+•Qual é a função principal da camada de enlace?
+•O que significa enquadramento de dados (frame)?
+•Por que é importante detectar erros na transmissão?
+
+C) Endereçamento MAC
+Responda:
+•O que é um endereço MAC?
+•Para que ele serve dentro da rede?
+•Em qual dispositivo normalmente ele está associado?
+
+
+3. Desafio 
+
+Liste 3 dispositivos conectados a uma rede na sua casa ou escola.
+Agora responda:
+•Todos esses dispositivos precisam de endereçamento para se comunicar?
+•Qual camada da rede você acha que ajuda a identificar cada dispositivo na rede local?
+
+
+4. Pergunta 
+Se os dados são enviados como sinais elétricos, ópticos ou de rádio, como o computador consegue reconstruir a informação original?
+
+
+
+5. Mini Quiz. 
+Pergunta 1
+
+A camada física é responsável por:
+
+A) Organizar pacotes de dados
+
+B) Transmitir bits pelo meio físico
+
+C) Gerenciar aplicações
+
+D) Roteamento de rede
+Pergunta 2
+
+O endereço MAC é usado para:
+
+A) Identificar dispositivos em uma rede local
+
+B) Conectar redes diferentes
+
+C) Traduzir nomes de domínio
+
+D) Criptografar dados
+Pergunta 3
+
+A camada de enlace ajuda a:
+
+A) Controlar o acesso ao meio e detectar erros
+
+B) Executar aplicações
+
+C) Traduzir páginas web
+
+D) Criar bancos de dados
+---------------------------------------------
+PROVA FORMATIVA 2 — AVD 2
+Disciplina: Serviço de Redes de Computadores
+Parte 1 — Conceitos Fundamentais de Redes
+1) Explique com suas palavras:
+a) O que é um endereço IP.
+b) Qual a importância do endereço IP em uma rede de computadores.
+c) Diferença entre endereço IP público e privado.
+d) Diferença entre IPv4 e IPv6.
+e) O que significa comunicação em rede.
+Parte 2 — Estrutura do IPv4
+2) Pesquise e explique detalhadamente:
+a) O que é IPv4.
+b) Como é formado um endereço IPv4.
+c) O que significa octeto.
+d) O que é máscara de sub-rede.
+e) O que é gateway padrão.
+f) O que é DNS.
+Parte 3 — Classes de Endereçamento IPv4
+3) Pesquise e explique:
+Classe A
+Classe B
+Classe C
+Classe D
+Classe E
+Para cada classe informe:
+Faixa de endereçamento
+Máscara padrão
+Quantidade aproximada de hosts
+Finalidade da classe
+Exemplo de utilização
+Parte 4 — Endereços Especiais IPv4
+4) Explique os seguintes endereços:
+127.0.0.1
+0.0.0.0
+255.255.255.255
+Endereço de broadcast
+Endereço de rede
+Endereço APIPA
+Explique:
+Função
+Quando é utilizado
+Exemplo prático
+Parte 5 — Cálculo e Planejamento de Rede
+5) Responda os exercícios abaixo:
+a)
+Uma rede possui o endereço:
+
+192.168.10.0/24
+Informe:
+
+Máscara de sub-rede
+Quantidade máxima de hosts
+Primeiro IP válido
+Último IP válido
+Endereço de broadcast
+b)
+Uma empresa possui 50 computadores.
+
+Qual máscara de rede seria adequada?
+
+Explique o motivo.
+
+c)
+Uma escola possui:
+
+Secretaria
+Laboratório
+Direção
+Rede Wi-Fi alunos
+Explique:
+
+Como dividir a rede utilizando IPv4
+Por que a separação é importante
+Quais benefícios isso traz
+Parte 6 — Equipamentos de Rede
+6) Pesquise e explique os seguintes equipamentos:
+Switch
+Hub
+Roteador
+Access Point
+Modem
+Firewall
+Patch Panel
+Servidor DHCP
+Servidor DNS
+Para cada equipamento informe:
+Função
+Como funciona
+Onde é utilizado
+Exemplo prático de utilização
+Parte 7 — Comparação prática de equipamentos
+7) Monte uma tabela comparando:
+Equipamento
+
+Função Principal
+
+Trabalha em qual camada?
+
+Exemplo de uso
+
+Hub
+
+
+
+
+Switch
+
+
+
+
+Roteador
+
+
+
+
+Access Point
+
+
+
+
+Parte 8 — Estudo de Caso
+8) Estudo de Caso — Rede Escolar
+Imagine que uma escola possui:
+
+3 laboratórios de informática
+Secretaria
+Sala dos professores
+Wi-Fi para alunos
+Sistema de câmeras
+Internet fibra óptica
+Explique:
+a) Quais equipamentos de rede seriam necessários.
+b) Como os computadores receberiam endereço IP.
+c) Qual equipamento faria o roteamento da rede.
+d) Qual equipamento distribuiria Wi-Fi.
+e) Qual a importância do switch nesse cenário.
+f) Qual seria a função do firewall.
+g) Como o DNS ajudaria os usuários.
+Parte 9 — Atividade Prática
+9) Atividade prática no computador
+O aluno deverá executar os comandos abaixo no computador e explicar o resultado apresentado.
+
+Windows
+ipconfig
+ping google.com
+tracert google.com
+nslookup google.com
+Linux
+ifconfig ou ip a
+ping google.com
+traceroute google.com
+nslookup google.com
+O aluno deverá:
+Tirar prints da execução dos comandos
+Explicar o que cada comando faz
+Identificar informações de IP, gateway e DNS
+Explicar quais equipamentos e protocolos participam da comunicação
+Parte 10 — Segurança e Redes
+10) Pesquise e explique:
+a) O que é NAT.
+b) O que é DHCP.
+c) O que é firewall.
+d) Como o roteador ajuda na segurança da rede.
+e) O que pode acontecer quando uma rede não possui segmentação adequada.
+Parte 11 — Produção Final
+11) Conclusão
+Elabore um texto com no mínimo 20 linhas respondendo:
+
+Qual a importância do IPv4 nas redes atuais.
+Qual equipamento de rede você considera mais importante e por quê.
+Como os equipamentos de rede participam do funcionamento da Internet no dia a dia.
+----------------------------------------------
+PROVA FORMATIVA 1 — AVD 2
+
+Disciplina: Serviço de Redes de Computadores
+
+Tema
+
+Camadas 3, 4 e 7 do Modelo OSI e seus principais protocolos.
+
+
+
+Parte 1 — Revisão Conceitual do Modelo OSI
+
+1) Explique com suas palavras:
+
+a) O que é o Modelo OSI.
+b) Qual a importância do Modelo OSI para as redes de computadores.
+c) Por que as camadas do Modelo OSI são divididas em funções específicas.
+
+
+Parte 2 — Camada 3 — Rede
+
+2) Pesquise e explique detalhadamente:
+
+a) Qual a função da Camada 3 do Modelo OSI.
+b) O que é roteamento de rede.
+c) Diferença entre endereço IP e endereço MAC.
+d) O que é um roteador e qual sua função na rede.
+e) Explique o conceito de comunicação entre redes diferentes.
+ 
+
+ 
+
+
+
+3) Protocolos da Camada 3
+
+Pesquise e explique os seguintes protocolos:
+
+IPv4
+IPv6
+ICMP
+IPsec
+Para cada protocolo informe:
+
+Finalidade
+Como funciona
+Onde é utilizado
+Exemplo prático de utilização
+
+
+4) Estudo prático — Camada 3
+
+Imagine que uma empresa possui:
+
+Setor Administrativo
+Setor Financeiro
+Laboratório de Informática
+Rede Wi‑Fi para visitantes
+Explique:
+
+a) Como a Camada 3 pode ajudar na comunicação entre essas redes.
+b) Qual seria a função do roteador nesse cenário.
+c) Quais problemas poderiam ocorrer sem roteamento adequado.
+
+
+Parte 3 — Camada 4 — Transporte
+
+5) Pesquise e explique detalhadamente:
+
+a) Qual a função da Camada 4 do Modelo OSI.
+b) O que significa transporte de dados fim a fim.
+c) O que são portas lógicas.
+d) O que é segmentação de dados.
+e) O que significa confiabilidade na transmissão.
+
+
+6) Protocolos da Camada 4
+
+Pesquise e explique os seguintes protocolos:
+
+TCP
+UDP
+Para cada protocolo informe:
+
+Características principais
+Vantagens
+Desvantagens
+Aplicações práticas
+Exemplos reais de utilização
+
+
+7) Comparação prática — TCP x UDP
+
+Monte uma tabela comparando:
+
+Característica
+
+TCP
+
+UDP
+
+Confiabilidade
+
+
+
+Velocidade
+
+
+
+Controle de erro
+
+
+
+Confirmação de entrega
+
+
+
+Aplicações comuns
+
+
+
+
+
+8) Estudo de Caso — Streaming e Jogos Online
+
+Explique:
+
+a) Por que jogos online normalmente utilizam UDP.
+b) Por que sistemas bancários utilizam TCP.
+c) Qual protocolo seria mais adequado para uma videoconferência e por quê.
+
+
+Parte 4 — Camada 7 — Aplicação
+
+9) Pesquise e explique detalhadamente:
+
+a) Qual a função da Camada 7 do Modelo OSI.
+b) Como a camada de aplicação se relaciona com os usuários.
+c) Diferença entre aplicação e protocolo de aplicação.
+
+
+10) Protocolos da Camada 7
+
+Pesquise e explique os seguintes protocolos:
+
+HTTP
+HTTPS
+DNS
+DHCP
+FTP
+SMTP
+POP3
+IMAP
+Para cada protocolo informe:
+
+Finalidade
+Porta utilizada
+Funcionamento básico
+Aplicação prática
+Exemplo real de uso
+
+
+11) Estudo de Caso — Internet Corporativa
+
+Uma empresa possui:
+
+Sistema web interno
+Servidor de e‑mails
+Compartilhamento de arquivos
+Acesso à Internet
+Wi‑Fi corporativo
+Explique:
+
+a) Quais protocolos da Camada 7 seriam utilizados nesse ambiente.
+b) Como o DNS ajuda os usuários da rede.
+c) Qual a importância do HTTPS atualmente.
+d) Qual protocolo seria utilizado para envio de e‑mails.
+e) Qual a função do DHCP em uma rede corporativa.
+
+
+Parte 5 — Segurança em Redes
+
+12) Pesquise e explique:
+
+a) Como as Camadas 3, 4 e 7 estão relacionadas à segurança da informação.
+b) O que é firewall.
+c) Como os firewalls podem filtrar tráfego utilizando informações dessas camadas.
+d) O que é inspeção de pacotes.
+e) O que é VPN e qual camada ela pode utilizar.
+
+
+Parte 6 — Produção Final
+
+13) Conclusão
+
+Elabore um texto com no mínimo 20 linhas respondendo:
+
+Qual a importância das Camadas 3, 4 e 7 no funcionamento da Internet.
+Qual camada você considera mais importante e por quê.
+Como essas camadas aparecem no dia a dia sem que as pessoas percebam.
+
+
+ 
+
+Observação Importante
+
+Trabalhos com respostas extremamente resumidas, sem explicações técnicas ou apenas copiados da Internet poderão ter desconto na nota. O objetivo da atividade é demonstrar compreensão do funcionamento das redes de computadores e dos protocolos utilizados nas camadas do Modelo OSI.
