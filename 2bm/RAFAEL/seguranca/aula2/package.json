@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "poku": "^4.5.0"
-  },
   "name": "seguranca",
   "version": "1.0.0",
   "description": "",
@@ -12,5 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "poku": "^4.5.0"
+  }
 }
