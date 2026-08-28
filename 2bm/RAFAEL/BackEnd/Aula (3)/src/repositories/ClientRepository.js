@@ -41,7 +41,7 @@ export async function getById(id){
 export async function getByWord(id){
     try{
         const conn = await getConn()
-        const sql = `select * from cliente where nome = %jo`
+        const sql = `select * from cliente where nome like %jo`
         const result = await conn.request().input('id',sqlType.Int,id).query(sql)
         conn.close()
         return result.recordset

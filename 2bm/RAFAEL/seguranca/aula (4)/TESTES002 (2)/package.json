@@ -1,0 +1,16 @@
+{
+  "name": "aula003",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx poku"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "poku": "^4.5.0"
+  }
+}
